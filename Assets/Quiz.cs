@@ -10,8 +10,8 @@ using TMPro;
 [Serializable]
 public class QuizData
 {
-    // BigIntはJSONの仕様上stringで受け取る
-    public string wordId;
+    // JSONのwordIdが数値型であるため、intに変更
+    public int wordId;
     public string question;
     public List<string> options;
     public string correctAnswer;
@@ -20,17 +20,13 @@ public class QuizData
 
 // JSON配列をデシリアライズするために一時的に使用するラッパークラス
 [Serializable]
-class QuizListWrapper
+public class QuizListWrapper
 {
     public QuizData[] quizzes;
 }
 
 public class Quiz : MonoBehaviour
 {
-    // APIのエンドポイントURL
-    // ここにあなたのバックエンドAPIのURLを設定してください
-    private const string API_URL = "http://localhost:3000/api/unity_question";
-
     // 取得したクイズデータを格納するリスト
     private List<QuizData> fetchedQuizzes;
 
@@ -38,46 +34,59 @@ public class Quiz : MonoBehaviour
     public Button[] optionButtons; // 4つの選択肢ボタン
     public TextMeshProUGUI[] optionTexts; // 各ボタンのテキスト
 
-    
     private int currentQuizIndex = 0;
 
-
     // クイズデータを取得する公開メソッド
-    // このメソッドをUIボタンのクリックイベントなどから呼び出します
     public void FetchQuizzes()
     {
         StartCoroutine(GetQuizData());
-        Debug.Log("成功");
+        Debug.Log("クイズデータの取得を開始します。");
     }
 
-    // 実際のAPIリクエストを行うコルーチン
     private IEnumerator GetQuizData()
-{
-    using (UnityWebRequest webRequest = UnityWebRequest.Get(API_URL))
     {
-        // PlayerPrefsから保存しておいたトークンを取得
-        string token = PlayerPrefs.GetString("jwt_token");
-
-        // トークンがあればAuthorizationヘッダーに追加
-        if (!string.IsNullOrEmpty(token))
+        using (UnityWebRequest webRequest = ApiClient.CreateGet("unity_question"))
         {
-            webRequest.SetRequestHeader("Authorization", "Bearer " + token);
-        }
+            yield return webRequest.SendWebRequest();
 
-        yield return webRequest.SendWebRequest();
+            if (webRequest.result == UnityWebRequest.Result.Success)
+            {
+                string jsonString = webRequest.downloadHandler.text;
+                Debug.Log("クイズデータの取得に成功しました！");
+                Debug.Log("取得したJSONデータ: " + jsonString);
 
-        if (webRequest.result == UnityWebRequest.Result.Success)
-        {
-            // 成功したときの処理...
-            Debug.Log("クイズデータの取得に成功しました！");
-        }
-        else
-        {
-            // 失敗したときの処理...
-            Debug.LogError("クイズデータの取得に失敗しました: " + webRequest.error);
+                try
+                {
+                    string jsonWrapper = "{ \"quizzes\": " + jsonString + "}";
+                    QuizListWrapper wrapper = JsonUtility.FromJson<QuizListWrapper>(jsonWrapper);
+
+                    if (wrapper != null && wrapper.quizzes != null)
+                    {
+                        fetchedQuizzes = new List<QuizData>(wrapper.quizzes);
+                        Debug.Log("クイズデータのパースに成功しました。取得件数: " + fetchedQuizzes.Count);
+
+                        if (fetchedQuizzes.Count > 0)
+                        {
+                            DisplayQuiz();
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError("JSONデータのパースに失敗しました。Wrapperまたはquizzesがnullです。");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError("JSONデータのパース中に例外が発生しました: " + e.Message);
+                }
+            }
+            else
+            {
+                Debug.LogError("クイズデータの取得に失敗しました: " + webRequest.error);
+            }
         }
     }
-}
+
     private void DisplayQuiz()
     {
         if (fetchedQuizzes == null || fetchedQuizzes.Count <= currentQuizIndex)
@@ -91,34 +100,41 @@ public class Quiz : MonoBehaviour
 
         for (int i = 0; i < optionButtons.Length; i++)
         {
-            // ボタンに選択肢テキストを設定
-            optionTexts[i].text = currentQuiz.options[i];
+            int index = i;
+            optionTexts[index].text = currentQuiz.options[index];
 
-            // ボタンがクリックされたときの処理を設定
-            // 既存のリスナーをクリアしてから追加する
-            optionButtons[i].onClick.RemoveAllListeners();
-            optionButtons[i].onClick.AddListener(() => CheckAnswer(optionTexts[i].text));
+            // 修正箇所：リスナーの登録方法
+            optionButtons[index].onClick.RemoveAllListeners();
+            // CheckAnswerメソッドを引数付きで呼び出すための修正
+            optionButtons[index].onClick.AddListener(() => CheckAnswer(index));
         }
     }
 
-    private void CheckAnswer(string selectedAnswer)
+    // 修正箇所：CheckAnswerメソッドの引数を変更
+    private void CheckAnswer(int selectedOptionIndex)
     {
+        string selectedAnswer = fetchedQuizzes[currentQuizIndex].options[selectedOptionIndex];
         string correctAnswer = fetchedQuizzes[currentQuizIndex].correctAnswer;
+
         if (selectedAnswer == correctAnswer)
         {
             Debug.Log("正解！おめでとうございます！");
-            // 正解時の処理（スコア加算、次の問題へ進むなど）
             currentQuizIndex++;
-            DisplayQuiz();
+            if (currentQuizIndex < fetchedQuizzes.Count)
+            {
+                DisplayQuiz();
+            }
+            else
+            {
+                Debug.Log("すべてのクイズが終了しました！");
+            }
         }
         else
         {
             Debug.Log("残念、不正解です。");
-            // 不正解時の処理
         }
     }
 
-    // 他のスクリプトからクイズデータにアクセスするためのメソッド
     public List<QuizData> GetQuizzes()
     {
         return fetchedQuizzes;
