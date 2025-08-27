@@ -38,4 +38,9 @@ public class PagesButton : MonoBehaviour
     {
         SceneManager.LoadScene("profile");
     }
+
+    public void OnClickAddWordsbutton()
+    {
+        SceneManager.LoadScene("word");
+    }
 }
