@@ -54,12 +54,12 @@ public class AddWordPopupManager : MonoBehaviour
         createWordManager.CreateWord(word, meaning, OnWordAdded);
     }
 
-    void OnWordAdded(bool success)
+    void OnWordAdded(bool success, string newId)
     {
         if (success)
         {
             // WordListManagerに反映
-            wordListManager.AddWordToList(pendingWord, pendingMeaning);
+            wordListManager.AddWordToList(newId, pendingWord, pendingMeaning);
             HidePopup(); // 成功したら閉じる
         }
         else

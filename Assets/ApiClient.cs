@@ -37,4 +37,15 @@ public static class ApiClient
 
         return www;
     }
+
+    // Delete 用
+    public static UnityWebRequest CreateDelete(string path)
+    {
+        UnityWebRequest www = UnityWebRequest.Delete(BASE_URL + path);
+        string token = PlayerPrefs.GetString("token", "");
+        if (!string.IsNullOrEmpty(token))
+            www.SetRequestHeader("Authorization", "Bearer " + token);
+        www.downloadHandler = new DownloadHandlerBuffer(); // 忘れずに
+        return www;
+    }
 }
