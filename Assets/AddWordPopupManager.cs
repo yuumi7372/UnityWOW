@@ -46,6 +46,12 @@ public class AddWordPopupManager : MonoBehaviour
             Debug.Log("単語と意味を入力してください。");
             return;
         }
+        // ローカル重複チェック
+        if (wordListManager.IsWordDuplicate(word))
+        {
+            Debug.Log("この単語はすでに登録されています（ローカルチェック）");
+            return;
+        }
 
         pendingWord = word;
         pendingMeaning = meaning;
@@ -54,7 +60,7 @@ public class AddWordPopupManager : MonoBehaviour
         createWordManager.CreateWord(word, meaning, OnWordAdded);
     }
 
-    void OnWordAdded(bool success, string newId)
+    void OnWordAdded(bool success, string newId, string errorMessage)
     {
         if (success)
         {
@@ -64,7 +70,7 @@ public class AddWordPopupManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("単語追加に失敗しました。");
+            Debug.Log(errorMessage);
         }
     }
 }

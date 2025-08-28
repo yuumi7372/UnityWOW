@@ -6,7 +6,7 @@ using System.Text;
 
 public class CreateWordManager : MonoBehaviour
 {
-    public void CreateWord(string word, string meaning, Action<bool, string> callback)
+    public void CreateWord(string word, string meaning, Action<bool, string, string> callback)
     {
         StartCoroutine(CreateWordCoroutine(word, meaning, callback));
     }
@@ -26,7 +26,7 @@ public class CreateWordManager : MonoBehaviour
         public string status; // APIが返すなら
     }
 
-    private IEnumerator CreateWordCoroutine(string word, string meaning, Action<bool, string> callback)
+    private IEnumerator CreateWordCoroutine(string word, string meaning, Action<bool, string, string> callback)
     {
         // JSON用クラス作成
         WordPayload payload = new WordPayload { word = word, meaning = meaning };
@@ -55,12 +55,17 @@ public class CreateWordManager : MonoBehaviour
 
             // JSONをパースしてIDを取得
             CreateWordResponse res = JsonUtility.FromJson<CreateWordResponse>(responseJson);
-            callback?.Invoke(true, res.id);
+            callback?.Invoke(true, res.id, null);
         }
         else
         {
             Debug.Log("単語追加失敗API: " + www.downloadHandler.text);
-            callback?.Invoke(false, null);
+            string errorMessage = "サーバーエラーが発生しました。";
+            if (www.responseCode == 409) // 重複エラー
+            {
+                errorMessage = "この単語は既に登録されています。";
+            }
+            callback?.Invoke(false, null, errorMessage);
         }
     }
 }

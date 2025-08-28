@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI; 
 
@@ -26,14 +27,16 @@ public class WordListManager : MonoBehaviour
     public ExplainPopupManager popupManager;//単語詳細のポップアップ
     public Button plusButton;
     public AddWordPopupManager addWordPopupManager;//単語追加のポップアップ
-    
+
+    private HashSet<string> existingWords = new HashSet<string>();  //既存単語の管理
+
 
     void Start()
     {
         StartCoroutine(LoadWordsFromServer());
 
         // ＋ボタンにリスナー追加
-    
+
         plusButton.onClick.AddListener(addWordPopupManager.ShowPopup);
     }
 
@@ -58,8 +61,19 @@ public class WordListManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 単語リストに追加（重複チェックあり）
+    /// </summary>
     public void AddWordToList(string id, string word, string meaning)
     {
+        string normalizedWord = word.Trim().ToLower();
+        // 重複チェック
+        if (existingWords.Contains(normalizedWord))
+        {
+            Debug.LogWarning($"重複: {word} はすでに登録されています。");
+            return;
+        }
+        existingWords.Add(normalizedWord); // HashSetに追加
 
         GameObject newItem = Instantiate(wordItemPrefab, content);
         DetailWordButton detailButton = newItem.GetComponent<DetailWordButton>();
@@ -73,5 +87,13 @@ public class WordListManager : MonoBehaviour
             texts[1].text = meaning; // 2つ目のTextに意味
         }
         Debug.Log($"AddWordToList: id={id}, word={word}, meaning={meaning}");
+    }
+    
+    /// <summary>
+    /// 指定した単語が既に登録されているか確認
+    /// </summary>
+    public bool IsWordDuplicate(string word)
+    {
+        return existingWords.Contains(word.Trim().ToLower());
     }
 }
