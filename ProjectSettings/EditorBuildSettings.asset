@@ -1,28 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!1045 &1
-EditorBuildSettings:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/title.unity
-    guid: fd6e88d1a823b724d95068ff3f40ff4d
-  - enabled: 1
-    path: Assets/Scenes/home.unity
-    guid: ad9fb2eee9086b744be8b7b60c24071d
-  - enabled: 1
-    path: Assets/Scenes/quest.unity
-    guid: d16c2475ab0d0cb42965a9304d495536
-  - enabled: 1
-    path: Assets/Scenes/adventure/adventure_home.unity
-    guid: f9a199e172e47b541babe1aa3d5d8f77
-  - enabled: 1
-    path: Assets/Scenes/profile.unity
-    guid: bd1c210bbeede8844a68e28ebc40d3bd
-  - enabled: 1
-    path: Assets/Scenes/add_words.unity
-    guid: a0e9613d6bbe63f4b8436fb58c31b7f3
-  m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  m_UseUCBPForAssetBundles: 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f64b430fe74d105161031bbe75d25feffa128444232b56cb70d94241c7c4ee6
+size 992

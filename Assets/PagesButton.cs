@@ -6,6 +6,7 @@ public class PagesButton : MonoBehaviour
     public GameObject startButton;
     public GameObject loginPanel;
 
+
     public void OnClickStartbutton()
     {
         // ログイン済みかチェック
@@ -38,4 +39,11 @@ public class PagesButton : MonoBehaviour
     {
         SceneManager.LoadScene("profile");
     }
+
+    public void OnClickAddWordsbutton()
+    {
+        SceneManager.LoadScene("word");
+    }
+
+   
 }
