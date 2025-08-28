@@ -11168,4 +11168,5 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
+    intParameter: 45998
     messageOptions: 1
