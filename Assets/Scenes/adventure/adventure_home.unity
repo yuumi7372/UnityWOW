@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 502411261}
   - component: {fileID: 502411260}
   m_Layer: 5
-  m_Name: Button
+  m_Name: "Button\uFF12"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 513979325}
   - component: {fileID: 513979324}
   m_Layer: 5
-  m_Name: Button
+  m_Name: "Button\uFF14"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -773,7 +773,7 @@ GameObject:
   - component: {fileID: 669192477}
   - component: {fileID: 669192476}
   m_Layer: 5
-  m_Name: Button
+  m_Name: "Button\uFF13"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 743917644}
   - component: {fileID: 743917643}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: "\u9078\u629E\u80A2\uFF13"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1064,8 +1064,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1188,6 +1188,61 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1059371778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059371780}
+  - component: {fileID: 1059371779}
+  m_Layer: 0
+  m_Name: Quizmanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1059371779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059371778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c68f9abe5bbf934e9f73cd0d892a480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionText: {fileID: 1968413044}
+  optionButtons:
+  - {fileID: 2144217665}
+  - {fileID: 502411261}
+  - {fileID: 669192477}
+  - {fileID: 513979325}
+  optionTexts:
+  - {fileID: 1934579284}
+  - {fileID: 2044934463}
+  - {fileID: 743917643}
+  - {fileID: 2001937458}
+--- !u!4 &1059371780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059371778}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1112250004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,7 +1732,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1013182510062408231, guid: 51261ce9e7029a546b73602b67e6a13a, type: 3}
+  m_Sprite: {fileID: -1013182510062408231, guid: 941a6178b7378e446831eca412ccd9cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1815,7 +1870,7 @@ GameObject:
   - component: {fileID: 1934579285}
   - component: {fileID: 1934579284}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: "\u9078\u629E\u80A2\uFF11"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1887,8 +1942,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1952,7 +2007,7 @@ GameObject:
   - component: {fileID: 1968413044}
   - component: {fileID: 1968413043}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: "\u554F\u984C\u6587"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2111,7 +2166,7 @@ GameObject:
   - component: {fileID: 2001937459}
   - component: {fileID: 2001937458}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: "\u9078\u629E\u80A2\uFF14"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2183,8 +2238,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2247,7 +2302,7 @@ GameObject:
   - component: {fileID: 2044934464}
   - component: {fileID: 2044934463}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: "\u9078\u629E\u80A2\uFF12"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2319,8 +2374,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2522,7 +2577,7 @@ GameObject:
   - component: {fileID: 2144217665}
   - component: {fileID: 2144217664}
   m_Layer: 5
-  m_Name: Button
+  m_Name: "Button\uFF11"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2651,3 +2706,4 @@ SceneRoots:
   - {fileID: 2054825134}
   - {fileID: 1302770501}
   - {fileID: 68674581}
+  - {fileID: 1059371780}

@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 using System;
 using UnityEngine.UI;
 using TMPro;
+// using System.Runtime.InteropServices; // JWT認証に切り替えたため、このインポートは不要
 
 // APIから返ってくるクイズデータの単体構造を定義
 [Serializable]
@@ -36,6 +37,12 @@ public class Quiz : MonoBehaviour
 
     private int currentQuizIndex = 0;
 
+    void Start()
+    {
+        // 実際にはログイン成功後にFetchQuizzes()を呼び出すべきですが、テストのためStartに残します。
+        FetchQuizzes();
+    }
+
     // クイズデータを取得する公開メソッド
     public void FetchQuizzes()
     {
@@ -45,13 +52,16 @@ public class Quiz : MonoBehaviour
 
     private IEnumerator GetQuizData()
     {
-        using (UnityWebRequest webRequest = ApiClient.CreateGet("unity_question"))
+        // ApiClientがJWTトークンを自動でヘッダーに追加することを前提とします。
+        using (UnityWebRequest webRequest = ApiClient.CreateGet("question"))
         {
             yield return webRequest.SendWebRequest();
 
             if (webRequest.result == UnityWebRequest.Result.Success)
             {
-                string jsonString = webRequest.downloadHandler.text;
+                // 文字化け対策（UTF-8デコード）を維持
+                byte[] data = webRequest.downloadHandler.data;
+                string jsonString = System.Text.Encoding.UTF8.GetString(data);
                 Debug.Log("クイズデータの取得に成功しました！");
                 Debug.Log("取得したJSONデータ: " + jsonString);
 
@@ -80,6 +90,11 @@ public class Quiz : MonoBehaviour
                     Debug.LogError("JSONデータのパース中に例外が発生しました: " + e.Message);
                 }
             }
+            else if (webRequest.responseCode == 401)
+            {
+                Debug.LogError("クイズデータの取得に失敗しました (401 Unauthorized): トークンが無効または期限切れです。");
+                // TODO: ここでログイン画面に戻る、または再ログインを促す処理を追加
+            }
             else
             {
                 Debug.LogError("クイズデータの取得に失敗しました: " + webRequest.error);
@@ -96,11 +111,22 @@ public class Quiz : MonoBehaviour
         }
 
         QuizData currentQuiz = fetchedQuizzes[currentQuizIndex];
+
+        // ★修正1: optionsの数がUIボタンの数と一致するかチェック★
+        if (currentQuiz.options.Count != optionButtons.Length)
+        {
+            Debug.LogError($"エラー: APIデータの選択肢数 ({currentQuiz.options.Count}) がUIのボタン数 ({optionButtons.Length}) と一致しません。");
+            // 致命的なエラーなので、ここでクイズを終了させても良い
+            return;
+        }
+
         questionText.text = currentQuiz.question;
 
         for (int i = 0; i < optionButtons.Length; i++)
         {
             int index = i;
+
+            // optionsの数はチェック済みなので、ここでは安全
             optionTexts[index].text = currentQuiz.options[index];
 
             // 修正箇所：リスナーの登録方法
@@ -113,8 +139,25 @@ public class Quiz : MonoBehaviour
     // 修正箇所：CheckAnswerメソッドの引数を変更
     private void CheckAnswer(int selectedOptionIndex)
     {
-        string selectedAnswer = fetchedQuizzes[currentQuizIndex].options[selectedOptionIndex];
-        string correctAnswer = fetchedQuizzes[currentQuizIndex].correctAnswer;
+        // ★修正2: currentQuizIndex の範囲チェック★
+        if (fetchedQuizzes == null || currentQuizIndex < 0 || currentQuizIndex >= fetchedQuizzes.Count)
+        {
+            Debug.LogError("エラー: currentQuizIndex が範囲外です。クイズデータが不正です。Index: " + currentQuizIndex);
+            return;
+        }
+
+        QuizData currentQuiz = fetchedQuizzes[currentQuizIndex];
+
+        // ★修正3: selectedOptionIndex の範囲チェック★
+        if (selectedOptionIndex < 0 || selectedOptionIndex >= currentQuiz.options.Count)
+        {
+            Debug.LogError("エラー: 選択肢インデックスが範囲外です。ボタン設定またはAPIデータに問題があります。Index: " + selectedOptionIndex + ", Options Count: " + currentQuiz.options.Count);
+            return;
+        }
+
+        // ここ（122行目付近）が安全になります
+        string selectedAnswer = currentQuiz.options[selectedOptionIndex];
+        string correctAnswer = currentQuiz.correctAnswer;
 
         if (selectedAnswer == correctAnswer)
         {
