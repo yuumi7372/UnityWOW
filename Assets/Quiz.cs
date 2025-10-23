@@ -1,17 +1,19 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using System;
 using UnityEngine.UI;
 using TMPro;
-// using System.Runtime.InteropServices; // JWT”FØ‚ÉØ‚è‘Ö‚¦‚½‚½‚ßA‚±‚ÌƒCƒ“ƒ|[ƒg‚Í•s—v
+using System.Text;
+using UnityEngine.SceneManagement;
+// using System.Runtime.InteropServices; // JWTèªè¨¼ã«åˆ‡ã‚Šæ›¿ãˆãŸãŸã‚ã€ã“ã®ã‚¤ãƒ³ãƒãƒ¼ãƒˆã¯ä¸è¦
 
-// API‚©‚ç•Ô‚Á‚Ä‚­‚éƒNƒCƒYƒf[ƒ^‚Ì’P‘Ì\‘¢‚ğ’è‹`
+// APIã‹ã‚‰è¿”ã£ã¦ãã‚‹ã‚¯ã‚¤ã‚ºãƒ‡ãƒ¼ã‚¿ã®å˜ä½“æ§‹é€ ã‚’å®šç¾©
 [Serializable]
 public class QuizData
 {
-    // JSON‚ÌwordId‚ª”’lŒ^‚Å‚ ‚é‚½‚ßAint‚É•ÏX
+    // JSONã®wordIdãŒæ•°å€¤å‹ã§ã‚ã‚‹ãŸã‚ã€intã«å¤‰æ›´
     public int wordId;
     public string question;
     public List<string> options;
@@ -19,7 +21,7 @@ public class QuizData
     public int difficultyLevel;
 }
 
-// JSON”z—ñ‚ğƒfƒVƒŠƒAƒ‰ƒCƒY‚·‚é‚½‚ß‚Éˆê“I‚Ég—p‚·‚éƒ‰ƒbƒp[ƒNƒ‰ƒX
+// JSONé…åˆ—ã‚’ãƒ‡ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºã™ã‚‹ãŸã‚ã«ä¸€æ™‚çš„ã«ä½¿ç”¨ã™ã‚‹ãƒ©ãƒƒãƒ‘ãƒ¼ã‚¯ãƒ©ã‚¹
 [Serializable]
 public class QuizListWrapper
 {
@@ -28,42 +30,44 @@ public class QuizListWrapper
 
 public class Quiz : MonoBehaviour
 {
-    // æ“¾‚µ‚½ƒNƒCƒYƒf[ƒ^‚ğŠi”[‚·‚éƒŠƒXƒg
+    // å–å¾—ã—ãŸã‚¯ã‚¤ã‚ºãƒ‡ãƒ¼ã‚¿ã‚’æ ¼ç´ã™ã‚‹ãƒªã‚¹ãƒˆ
     private List<QuizData> fetchedQuizzes;
 
     public TextMeshProUGUI questionText;
-    public Button[] optionButtons; // 4‚Â‚Ì‘I‘ğˆƒ{ƒ^ƒ“
-    public TextMeshProUGUI[] optionTexts; // Šeƒ{ƒ^ƒ“‚ÌƒeƒLƒXƒg
+    public Button[] optionButtons; // 4ã¤ã®é¸æŠè‚¢ãƒœã‚¿ãƒ³
+    public TextMeshProUGUI[] optionTexts; // å„ãƒœã‚¿ãƒ³ã®ãƒ†ã‚­ã‚¹ãƒˆ
+    public TextMeshProUGUI resultText;
+    public string resultSceneName = "quiz_result";
 
     private int currentQuizIndex = 0;
 
     void Start()
     {
-        // ÀÛ‚É‚ÍƒƒOƒCƒ“¬Œ÷Œã‚ÉFetchQuizzes()‚ğŒÄ‚Ño‚·‚×‚«‚Å‚·‚ªAƒeƒXƒg‚Ì‚½‚ßStart‚Éc‚µ‚Ü‚·B
+        // å®Ÿéš›ã«ã¯ãƒ­ã‚°ã‚¤ãƒ³æˆåŠŸå¾Œã«FetchQuizzes()ã‚’å‘¼ã³å‡ºã™ã¹ãã§ã™ãŒã€ãƒ†ã‚¹ãƒˆã®ãŸã‚Startã«æ®‹ã—ã¾ã™ã€‚
         FetchQuizzes();
     }
 
-    // ƒNƒCƒYƒf[ƒ^‚ğæ“¾‚·‚éŒöŠJƒƒ\ƒbƒh
+    // ã‚¯ã‚¤ã‚ºãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—ã™ã‚‹å…¬é–‹ãƒ¡ã‚½ãƒƒãƒ‰
     public void FetchQuizzes()
     {
         StartCoroutine(GetQuizData());
-        Debug.Log("ƒNƒCƒYƒf[ƒ^‚Ìæ“¾‚ğŠJn‚µ‚Ü‚·B");
+        Debug.Log("ã‚¯ã‚¤ã‚ºãƒ‡ãƒ¼ã‚¿ã®å–å¾—ã‚’é–‹å§‹ã—ã¾ã™ã€‚");
     }
 
     private IEnumerator GetQuizData()
     {
-        // ApiClient‚ªJWTƒg[ƒNƒ“‚ğ©“®‚Åƒwƒbƒ_[‚É’Ç‰Á‚·‚é‚±‚Æ‚ğ‘O’ñ‚Æ‚µ‚Ü‚·B
+        // ApiClientãŒJWTãƒˆãƒ¼ã‚¯ãƒ³ã‚’è‡ªå‹•ã§ãƒ˜ãƒƒãƒ€ãƒ¼ã«è¿½åŠ ã™ã‚‹ã“ã¨ã‚’å‰æã¨ã—ã¾ã™ã€‚
         using (UnityWebRequest webRequest = ApiClient.CreateGet("question"))
         {
             yield return webRequest.SendWebRequest();
 
             if (webRequest.result == UnityWebRequest.Result.Success)
             {
-                // •¶š‰»‚¯‘ÎôiUTF-8ƒfƒR[ƒhj‚ğˆÛ
+                // æ–‡å­—åŒ–ã‘å¯¾ç­–ï¼ˆUTF-8ãƒ‡ã‚³ãƒ¼ãƒ‰ï¼‰ã‚’ç¶­æŒ
                 byte[] data = webRequest.downloadHandler.data;
                 string jsonString = System.Text.Encoding.UTF8.GetString(data);
-                Debug.Log("ƒNƒCƒYƒf[ƒ^‚Ìæ“¾‚É¬Œ÷‚µ‚Ü‚µ‚½I");
-                Debug.Log("æ“¾‚µ‚½JSONƒf[ƒ^: " + jsonString);
+                Debug.Log("ã‚¯ã‚¤ã‚ºãƒ‡ãƒ¼ã‚¿ã®å–å¾—ã«æˆåŠŸã—ã¾ã—ãŸï¼");
+                Debug.Log("å–å¾—ã—ãŸJSONãƒ‡ãƒ¼ã‚¿: " + jsonString);
 
                 try
                 {
@@ -73,7 +77,7 @@ public class Quiz : MonoBehaviour
                     if (wrapper != null && wrapper.quizzes != null)
                     {
                         fetchedQuizzes = new List<QuizData>(wrapper.quizzes);
-                        Debug.Log("ƒNƒCƒYƒf[ƒ^‚Ìƒp[ƒX‚É¬Œ÷‚µ‚Ü‚µ‚½Bæ“¾Œ”: " + fetchedQuizzes.Count);
+                        Debug.Log("ã‚¯ã‚¤ã‚ºãƒ‡ãƒ¼ã‚¿ã®ãƒ‘ãƒ¼ã‚¹ã«æˆåŠŸã—ã¾ã—ãŸã€‚å–å¾—ä»¶æ•°: " + fetchedQuizzes.Count);
 
                         if (fetchedQuizzes.Count > 0)
                         {
@@ -82,22 +86,22 @@ public class Quiz : MonoBehaviour
                     }
                     else
                     {
-                        Debug.LogError("JSONƒf[ƒ^‚Ìƒp[ƒX‚É¸”s‚µ‚Ü‚µ‚½BWrapper‚Ü‚½‚Íquizzes‚ªnull‚Å‚·B");
+                        Debug.LogError("JSONãƒ‡ãƒ¼ã‚¿ã®ãƒ‘ãƒ¼ã‚¹ã«å¤±æ•—ã—ã¾ã—ãŸã€‚Wrapperã¾ãŸã¯quizzesãŒnullã§ã™ã€‚");
                     }
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError("JSONƒf[ƒ^‚Ìƒp[ƒX’†‚É—áŠO‚ª”­¶‚µ‚Ü‚µ‚½: " + e.Message);
+                    Debug.LogError("JSONãƒ‡ãƒ¼ã‚¿ã®ãƒ‘ãƒ¼ã‚¹ä¸­ã«ä¾‹å¤–ãŒç™ºç”Ÿã—ã¾ã—ãŸ: " + e.Message);
                 }
             }
             else if (webRequest.responseCode == 401)
             {
-                Debug.LogError("ƒNƒCƒYƒf[ƒ^‚Ìæ“¾‚É¸”s‚µ‚Ü‚µ‚½ (401 Unauthorized): ƒg[ƒNƒ“‚ª–³Œø‚Ü‚½‚ÍŠúŒÀØ‚ê‚Å‚·B");
-                // TODO: ‚±‚±‚ÅƒƒOƒCƒ“‰æ–Ê‚É–ß‚éA‚Ü‚½‚ÍÄƒƒOƒCƒ“‚ğ‘£‚·ˆ—‚ğ’Ç‰Á
+                Debug.LogError("ã‚¯ã‚¤ã‚ºãƒ‡ãƒ¼ã‚¿ã®å–å¾—ã«å¤±æ•—ã—ã¾ã—ãŸ (401 Unauthorized): ãƒˆãƒ¼ã‚¯ãƒ³ãŒç„¡åŠ¹ã¾ãŸã¯æœŸé™åˆ‡ã‚Œã§ã™ã€‚");
+                // TODO: ã“ã“ã§ãƒ­ã‚°ã‚¤ãƒ³ç”»é¢ã«æˆ»ã‚‹ã€ã¾ãŸã¯å†ãƒ­ã‚°ã‚¤ãƒ³ã‚’ä¿ƒã™å‡¦ç†ã‚’è¿½åŠ 
             }
             else
             {
-                Debug.LogError("ƒNƒCƒYƒf[ƒ^‚Ìæ“¾‚É¸”s‚µ‚Ü‚µ‚½: " + webRequest.error);
+                Debug.LogError("ã‚¯ã‚¤ã‚ºãƒ‡ãƒ¼ã‚¿ã®å–å¾—ã«å¤±æ•—ã—ã¾ã—ãŸ: " + webRequest.error);
             }
         }
     }
@@ -106,17 +110,17 @@ public class Quiz : MonoBehaviour
     {
         if (fetchedQuizzes == null || fetchedQuizzes.Count <= currentQuizIndex)
         {
-            Debug.LogError("•\¦‚·‚éƒNƒCƒY‚ª‚ ‚è‚Ü‚¹‚ñB");
+            Debug.LogError("è¡¨ç¤ºã™ã‚‹ã‚¯ã‚¤ã‚ºãŒã‚ã‚Šã¾ã›ã‚“ã€‚");
             return;
         }
 
         QuizData currentQuiz = fetchedQuizzes[currentQuizIndex];
 
-        // šC³1: options‚Ì”‚ªUIƒ{ƒ^ƒ“‚Ì”‚Æˆê’v‚·‚é‚©ƒ`ƒFƒbƒNš
+        // â˜…ä¿®æ­£1: optionsã®æ•°ãŒUIãƒœã‚¿ãƒ³ã®æ•°ã¨ä¸€è‡´ã™ã‚‹ã‹ãƒã‚§ãƒƒã‚¯â˜…
         if (currentQuiz.options.Count != optionButtons.Length)
         {
-            Debug.LogError($"ƒGƒ‰[: APIƒf[ƒ^‚Ì‘I‘ğˆ” ({currentQuiz.options.Count}) ‚ªUI‚Ìƒ{ƒ^ƒ“” ({optionButtons.Length}) ‚Æˆê’v‚µ‚Ü‚¹‚ñB");
-            // ’v–½“I‚ÈƒGƒ‰[‚È‚Ì‚ÅA‚±‚±‚ÅƒNƒCƒY‚ğI—¹‚³‚¹‚Ä‚à—Ç‚¢
+            Debug.LogError($"ã‚¨ãƒ©ãƒ¼: APIãƒ‡ãƒ¼ã‚¿ã®é¸æŠè‚¢æ•° ({currentQuiz.options.Count}) ãŒUIã®ãƒœã‚¿ãƒ³æ•° ({optionButtons.Length}) ã¨ä¸€è‡´ã—ã¾ã›ã‚“ã€‚");
+            // è‡´å‘½çš„ãªã‚¨ãƒ©ãƒ¼ãªã®ã§ã€ã“ã“ã§ã‚¯ã‚¤ã‚ºã‚’çµ‚äº†ã•ã›ã¦ã‚‚è‰¯ã„
             return;
         }
 
@@ -126,55 +130,88 @@ public class Quiz : MonoBehaviour
         {
             int index = i;
 
-            // options‚Ì”‚Íƒ`ƒFƒbƒNÏ‚İ‚È‚Ì‚ÅA‚±‚±‚Å‚ÍˆÀ‘S
+            // optionsã®æ•°ã¯ãƒã‚§ãƒƒã‚¯æ¸ˆã¿ãªã®ã§ã€ã“ã“ã§ã¯å®‰å…¨
             optionTexts[index].text = currentQuiz.options[index];
 
-            // C³‰ÓŠFƒŠƒXƒi[‚Ì“o˜^•û–@
+            // ä¿®æ­£ç®‡æ‰€ï¼šãƒªã‚¹ãƒŠãƒ¼ã®ç™»éŒ²æ–¹æ³•
             optionButtons[index].onClick.RemoveAllListeners();
-            // CheckAnswerƒƒ\ƒbƒh‚ğˆø”•t‚«‚ÅŒÄ‚Ño‚·‚½‚ß‚ÌC³
+            // CheckAnswerãƒ¡ã‚½ãƒƒãƒ‰ã‚’å¼•æ•°ä»˜ãã§å‘¼ã³å‡ºã™ãŸã‚ã®ä¿®æ­£
             optionButtons[index].onClick.AddListener(() => CheckAnswer(index));
         }
     }
 
-    // C³‰ÓŠFCheckAnswerƒƒ\ƒbƒh‚Ìˆø”‚ğ•ÏX
+    // ä¿®æ­£ç®‡æ‰€ï¼šCheckAnswerãƒ¡ã‚½ãƒƒãƒ‰ã®å¼•æ•°ã‚’å¤‰æ›´
     private void CheckAnswer(int selectedOptionIndex)
     {
-        // šC³2: currentQuizIndex ‚Ì”ÍˆÍƒ`ƒFƒbƒNš
+        // â˜…ä¿®æ­£2: currentQuizIndex ã®ç¯„å›²ãƒã‚§ãƒƒã‚¯â˜…
         if (fetchedQuizzes == null || currentQuizIndex < 0 || currentQuizIndex >= fetchedQuizzes.Count)
         {
-            Debug.LogError("ƒGƒ‰[: currentQuizIndex ‚ª”ÍˆÍŠO‚Å‚·BƒNƒCƒYƒf[ƒ^‚ª•s³‚Å‚·BIndex: " + currentQuizIndex);
+            Debug.LogError("ã‚¨ãƒ©ãƒ¼: currentQuizIndex ãŒç¯„å›²å¤–ã§ã™ã€‚ã‚¯ã‚¤ã‚ºãƒ‡ãƒ¼ã‚¿ãŒä¸æ­£ã§ã™ã€‚Index: " + currentQuizIndex);
             return;
         }
 
         QuizData currentQuiz = fetchedQuizzes[currentQuizIndex];
 
-        // šC³3: selectedOptionIndex ‚Ì”ÍˆÍƒ`ƒFƒbƒNš
+        // â˜…ä¿®æ­£3: selectedOptionIndex ã®ç¯„å›²ãƒã‚§ãƒƒã‚¯â˜…
         if (selectedOptionIndex < 0 || selectedOptionIndex >= currentQuiz.options.Count)
         {
-            Debug.LogError("ƒGƒ‰[: ‘I‘ğˆƒCƒ“ƒfƒbƒNƒX‚ª”ÍˆÍŠO‚Å‚·Bƒ{ƒ^ƒ“İ’è‚Ü‚½‚ÍAPIƒf[ƒ^‚É–â‘è‚ª‚ ‚è‚Ü‚·BIndex: " + selectedOptionIndex + ", Options Count: " + currentQuiz.options.Count);
+            Debug.LogError("ã‚¨ãƒ©ãƒ¼: é¸æŠè‚¢ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒç¯„å›²å¤–ã§ã™ã€‚ãƒœã‚¿ãƒ³è¨­å®šã¾ãŸã¯APIãƒ‡ãƒ¼ã‚¿ã«å•é¡ŒãŒã‚ã‚Šã¾ã™ã€‚Index: " + selectedOptionIndex + ", Options Count: " + currentQuiz.options.Count);
             return;
         }
 
-        // ‚±‚±i122s–Ú•t‹ßj‚ªˆÀ‘S‚É‚È‚è‚Ü‚·
+        // ã“ã“ï¼ˆ122è¡Œç›®ä»˜è¿‘ï¼‰ãŒå®‰å…¨ã«ãªã‚Šã¾ã™
         string selectedAnswer = currentQuiz.options[selectedOptionIndex];
         string correctAnswer = currentQuiz.correctAnswer;
 
         if (selectedAnswer == correctAnswer)
         {
-            Debug.Log("³‰ğI‚¨‚ß‚Å‚Æ‚¤‚²‚´‚¢‚Ü‚·I");
+            Debug.Log("æ­£è§£ï¼ãŠã‚ã§ã¨ã†ã”ã–ã„ã¾ã™ï¼");
+            resultText.text = "æ­£è§£ï¼";
             currentQuizIndex++;
-            if (currentQuizIndex < fetchedQuizzes.Count)
-            {
-                DisplayQuiz();
-            }
-            else
-            {
-                Debug.Log("‚·‚×‚Ä‚ÌƒNƒCƒY‚ªI—¹‚µ‚Ü‚µ‚½I");
-            }
+
         }
         else
         {
-            Debug.Log("c”OA•s³‰ğ‚Å‚·B");
+            Debug.Log("æ®‹å¿µã€ä¸æ­£è§£ã§ã™ã€‚");
+            resultText.text = "æ®‹å¿µã€ä¸æ­£è§£";
+            currentQuizIndex++;
+        }
+        StartCoroutine(NextQuizAfterDelay(1.5f));
+    }
+    private IEnumerator NextQuizAfterDelay(float delay)
+    {
+        // ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸è¡¨ç¤ºã®ãŸã‚ã€ä¸€å®šæ™‚é–“å¾…æ©Ÿ
+        yield return new WaitForSeconds(delay);
+
+        // UIã‚’ãƒªã‚»ãƒƒãƒˆ
+        if (resultText != null) resultText.text = "";
+
+        // ãƒœã‚¿ãƒ³ã®æœ‰åŠ¹åŒ–ã¯ DisplayQuiz ã®ä¸­ã§è¡Œã„ã¾ã™ã€‚
+
+        // â˜…ä¿®æ­£: index ãŒæ¬¡ã®ã‚¯ã‚¤ã‚ºã¸é€²ã‚ã‚‹çŠ¶æ…‹ã‹ãƒã‚§ãƒƒã‚¯â˜…
+        if (currentQuizIndex < fetchedQuizzes.Count)
+        {
+            DisplayQuiz(); // æ¬¡ã®ã‚¯ã‚¤ã‚ºï¼ˆã¾ãŸã¯åŒã˜ã‚¯ã‚¤ã‚ºï¼‰ã‚’è¡¨ç¤º
+        }
+        else
+        {
+            Debug.Log("ã™ã¹ã¦ã®ã‚¯ã‚¤ã‚ºãŒçµ‚äº†ã—ã¾ã—ãŸï¼Resultãƒšãƒ¼ã‚¸ã¸é·ç§»ã—ã¾ã™ã€‚");
+
+            // 1. çµ‚äº†ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤º
+            questionText.text = "ã‚¯ã‚¤ã‚ºçµ‚äº†ï¼";
+            if (resultText != null) resultText.text = "çµæœç™ºè¡¨ã¸ï¼";
+
+            // 2. ãƒœã‚¿ãƒ³ã‚’ç„¡åŠ¹åŒ–ï¼ˆèª¤æ“ä½œé˜²æ­¢ï¼‰
+            foreach (Button btn in optionButtons)
+            {
+                if (btn != null)
+                {
+                    btn.interactable = false;
+                }
+            }
+
+            // 3. â˜…ç”»é¢é·ç§»ã®å®Ÿè¡Œâ˜…
+            SceneManager.LoadScene(resultSceneName);
         }
     }
 
