@@ -33,7 +33,7 @@ public class CreateWordManager : MonoBehaviour
         string json = JsonUtility.ToJson(payload);
 
         // UnityWebRequest 作成
-        UnityWebRequest www = new UnityWebRequest("http://localhost:3000/api/unity_create", "POST");
+        UnityWebRequest www = new UnityWebRequest("http://localhost:3000/api/addword", "POST");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
         www.uploadHandler = new UploadHandlerRaw(bodyRaw);
         www.downloadHandler = new DownloadHandlerBuffer();
