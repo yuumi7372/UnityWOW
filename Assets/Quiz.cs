@@ -8,6 +8,8 @@ using TMPro;
 using System.Text;
 using UnityEngine.SceneManagement;
 
+// QuizApiClientで使用する構造体との互換性のため、ここにも定義を残します
+
 // APIから返ってくるクイズデータの単体構造を定義
 [Serializable]
 public class QuizData
@@ -31,6 +33,18 @@ public class Quiz : MonoBehaviour
 {
     // 取得したクイズデータを格納するリスト
     private List<QuizData> fetchedQuizzes;
+
+    // ユーザーIDはログイン時に取得し、ここで保持していると想定 (仮の値)
+    private string CurrentUserId
+    {
+        get
+        {
+            return PlayerPrefs.GetString("userId", "1"); // デフォルトは "1"
+        }
+    }
+    // 正解した問題の難易度を一時的に保存するリスト
+    // 経験値計算のために使用
+    private List<int> correctDifficultyLevels = new List<int>();
 
     // UIコンポーネント (インスペクターから設定が必要です！)
     public TextMeshProUGUI questionText;
@@ -111,7 +125,7 @@ public class Quiz : MonoBehaviour
 
     private void DisplayQuiz()
     {
-        // ★NullReferenceException対策: UIコンポーネントが設定されているかチェック
+        // NullReferenceException対策: UIコンポーネントが設定されているかチェック
         if (questionText == null || optionButtons == null || optionTexts == null)
         {
             Debug.LogError("UIコンポーネント(QuestionText/Buttons/Texts)がインスペクターで設定されていません。");
@@ -139,7 +153,7 @@ public class Quiz : MonoBehaviour
         {
             int index = i;
 
-            // ★NullReferenceException対策: 配列要素が設定されているかチェック
+            // NullReferenceException対策: 配列要素が設定されているかチェック
             if (optionButtons[index] == null)
             {
                 Debug.LogError($"ボタン配列の {index} 番目がインスペクターで設定されていません。");
@@ -151,7 +165,6 @@ public class Quiz : MonoBehaviour
                 return;
             }
 
-            // 139行目付近
             optionTexts[index].text = currentQuiz.options[index];
 
             // リスナーの再登録（二重登録防止のため、一旦すべて削除）
@@ -165,12 +178,10 @@ public class Quiz : MonoBehaviour
 
     private void CheckAnswer(int selectedOptionIndex)
     {
-        // ★NullReferenceException対策: resultTextが設定されているかチェック
-        // (169行目付近でresultTextを使用している可能性があるため)
+        // NullReferenceException対策: resultTextが設定されているかチェック
         if (resultText == null)
         {
             Debug.LogError("ResultTextがインスペクターで設定されていません。結果表示をスキップします。");
-            // エラーログを出して処理は継続
         }
 
         // currentQuizIndex の範囲チェック
@@ -197,26 +208,31 @@ public class Quiz : MonoBehaviour
 
         string selectedAnswer = currentQuiz.options[selectedOptionIndex];
         string correctAnswer = currentQuiz.correctAnswer;
+        bool isCorrect = (selectedAnswer == correctAnswer); // 正解フラグを定義
 
-        if (selectedAnswer == correctAnswer)
+        // 1. 解答履歴を記録するためにQuizApiClientを呼び出し
+        StartCoroutine(QuizApiClient.RegisterAnswer(currentQuiz.wordId, isCorrect));
+
+        if (isCorrect)
         {
             Debug.Log("正解！おめでとうございます！");
-            if (resultText != null) // 169行目付近
+            if (resultText != null)
             {
                 resultText.text = "正解！";
             }
-            currentQuizIndex++;
-
+            // 正解の場合、経験値計算のために難易度をリストに追加
+            correctDifficultyLevels.Add(currentQuiz.difficultyLevel);
         }
         else
         {
             Debug.Log("残念、不正解です。");
-            if (resultText != null) // 169行目付近
+            if (resultText != null)
             {
                 resultText.text = "残念、不正解";
             }
-            currentQuizIndex++;
         }
+
+        currentQuizIndex++;
         StartCoroutine(NextQuizAfterDelay(1.5f));
     }
 
@@ -237,24 +253,54 @@ public class Quiz : MonoBehaviour
         {
             Debug.Log("すべてのクイズが終了しました！Resultページへ遷移します。");
 
-            // 1. 終了メッセージを表示
-            if (questionText != null) questionText.text = "クイズ終了！";
-            if (resultText != null) resultText.text = "結果発表へ！";
+            // クイズ終了時に経験値計算と結果画面遷移を行う
+            yield return StartCoroutine(PostFinalScore());
 
-            // 2. ボタンを無効化（誤操作防止）
-            if (optionButtons != null)
+            // 画面遷移の実行
+            SceneManager.LoadScene(resultSceneName);
+        }
+    }
+
+    // ★経験値計算と結果画面遷移のロジック (NextQuizAfterDelayから切り出し)★
+    private IEnumerator PostFinalScore()
+    {
+        // 1. UIを更新
+        if (questionText != null) questionText.text = "集計中...";
+        if (resultText != null) resultText.text = "経験値計算中...";
+
+        // 2. 経験値更新APIを呼び出し、結果を待機
+        ExperienceUpdateResult finalResult = null;
+        yield return StartCoroutine(
+            QuizApiClient.UpdateExperienceStatus(
+                CurrentUserId,
+                correctDifficultyLevels,
+                (result) => finalResult = result
+            )
+        );
+
+        // 3. 結果の表示（またはResultシーンに渡す処理）
+        if (finalResult != null)
+        {
+            Debug.Log($"最終獲得レベル: {finalResult.level}, レベルアップ: {finalResult.leveledUp}");
+            // finalResult のデータを保存し、Resultシーンで表示できるようにする
+            if (resultText != null) resultText.text = finalResult.leveledUp ? "レベルアップ！結果発表へ！" : "結果発表へ！";
+        }
+        else
+        {
+            Debug.LogError("経験値計算に失敗しました。");
+            if (resultText != null) resultText.text = "エラー発生。結果発表へ！";
+        }
+
+        // ボタンを無効化
+        if (optionButtons != null)
+        {
+            foreach (Button btn in optionButtons)
             {
-                foreach (Button btn in optionButtons)
+                if (btn != null)
                 {
-                    if (btn != null)
-                    {
-                        btn.interactable = false;
-                    }
+                    btn.interactable = false;
                 }
             }
-
-            // 3. 画面遷移の実行
-            SceneManager.LoadScene(resultSceneName);
         }
     }
 
