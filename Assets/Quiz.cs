@@ -7,7 +7,8 @@ using UnityEngine.UI;
 using TMPro;
 using System.Text;
 using UnityEngine.SceneManagement;
-// using System.Runtime.InteropServices; // JWT認証に切り替えたため、このインポートは不要
+
+// QuizApiClientで使用する構造体との互換性のため、ここにも定義を残します
 
 // APIから返ってくるクイズデータの単体構造を定義
 [Serializable]
@@ -32,18 +33,42 @@ public class Quiz : MonoBehaviour
 {
     // 取得したクイズデータを格納するリスト
     private List<QuizData> fetchedQuizzes;
+    private int correctAnswerCount = 0;
 
+    // ユーザーIDはログイン時に取得し、ここで保持していると想定 (仮の値)
+    private string CurrentUserId
+    {
+        get
+        {
+            return PlayerPrefs.GetString("userId", "1"); // デフォルトは "1"
+        }
+    }
+    // 正解した問題の難易度を一時的に保存するリスト
+    // 経験値計算のために使用
+    private List<int> correctDifficultyLevels = new List<int>();
+
+    // UIコンポーネント (インスペクターから設定が必要です！)
     public TextMeshProUGUI questionText;
     public Button[] optionButtons; // 4つの選択肢ボタン
     public TextMeshProUGUI[] optionTexts; // 各ボタンのテキスト
     public TextMeshProUGUI resultText;
+
+    // 画面遷移先のシーン名
     public string resultSceneName = "quiz_result";
 
     private int currentQuizIndex = 0;
 
+    // 修正内容: resultText.text = "がんばれ！"; の行はフィールド宣言部にあり、無効な構文です。
+    // UnityのMonoBehaviourでは、フィールド宣言部で直接値を代入できるのはフィールドのみです。
+    // resultText.text の初期化は Start() メソッド内で行う必要があります。
+
     void Start()
     {
         // 実際にはログイン成功後にFetchQuizzes()を呼び出すべきですが、テストのためStartに残します。
+        if (resultText != null)
+        {
+            resultText.text = "がんばれ！";
+        }
         FetchQuizzes();
     }
 
@@ -57,6 +82,7 @@ public class Quiz : MonoBehaviour
     private IEnumerator GetQuizData()
     {
         // ApiClientがJWTトークンを自動でヘッダーに追加することを前提とします。
+        // ★注意: ApiClient.CreateGet("question") の実装は、このファイルには含まれていません。
         using (UnityWebRequest webRequest = ApiClient.CreateGet("question"))
         {
             yield return webRequest.SendWebRequest();
@@ -108,6 +134,13 @@ public class Quiz : MonoBehaviour
 
     private void DisplayQuiz()
     {
+        // NullReferenceException対策: UIコンポーネントが設定されているかチェック
+        if (questionText == null || optionButtons == null || optionTexts == null)
+        {
+            Debug.LogError("UIコンポーネント(QuestionText/Buttons/Texts)がインスペクターで設定されていません。");
+            return;
+        }
+
         if (fetchedQuizzes == null || fetchedQuizzes.Count <= currentQuizIndex)
         {
             Debug.LogError("表示するクイズがありません。");
@@ -116,11 +149,10 @@ public class Quiz : MonoBehaviour
 
         QuizData currentQuiz = fetchedQuizzes[currentQuizIndex];
 
-        // ★修正1: optionsの数がUIボタンの数と一致するかチェック★
+        // APIデータの選択肢数とUIボタンの数が一致するかチェック
         if (currentQuiz.options.Count != optionButtons.Length)
         {
             Debug.LogError($"エラー: APIデータの選択肢数 ({currentQuiz.options.Count}) がUIのボタン数 ({optionButtons.Length}) と一致しません。");
-            // 致命的なエラーなので、ここでクイズを終了させても良い
             return;
         }
 
@@ -130,20 +162,38 @@ public class Quiz : MonoBehaviour
         {
             int index = i;
 
-            // optionsの数はチェック済みなので、ここでは安全
+            // NullReferenceException対策: 配列要素が設定されているかチェック
+            if (optionButtons[index] == null)
+            {
+                Debug.LogError($"ボタン配列の {index} 番目がインスペクターで設定されていません。");
+                return;
+            }
+            if (optionTexts[index] == null)
+            {
+                Debug.LogError($"テキスト配列の {index} 番目がインスペクターで設定されていません。");
+                return;
+            }
+
             optionTexts[index].text = currentQuiz.options[index];
 
-            // 修正箇所：リスナーの登録方法
+            // リスナーの再登録（二重登録防止のため、一旦すべて削除）
             optionButtons[index].onClick.RemoveAllListeners();
-            // CheckAnswerメソッドを引数付きで呼び出すための修正
             optionButtons[index].onClick.AddListener(() => CheckAnswer(index));
+
+            // ボタンを活性化
+            optionButtons[index].interactable = true;
         }
     }
 
-    // 修正箇所：CheckAnswerメソッドの引数を変更
     private void CheckAnswer(int selectedOptionIndex)
     {
-        // ★修正2: currentQuizIndex の範囲チェック★
+        // NullReferenceException対策: resultTextが設定されているかチェック
+        if (resultText == null)
+        {
+            Debug.LogError("ResultTextがインスペクターで設定されていません。結果表示をスキップします。");
+        }
+
+        // currentQuizIndex の範囲チェック
         if (fetchedQuizzes == null || currentQuizIndex < 0 || currentQuizIndex >= fetchedQuizzes.Count)
         {
             Debug.LogError("エラー: currentQuizIndex が範囲外です。クイズデータが不正です。Index: " + currentQuizIndex);
@@ -152,32 +202,50 @@ public class Quiz : MonoBehaviour
 
         QuizData currentQuiz = fetchedQuizzes[currentQuizIndex];
 
-        // ★修正3: selectedOptionIndex の範囲チェック★
+        // selectedOptionIndex の範囲チェック
         if (selectedOptionIndex < 0 || selectedOptionIndex >= currentQuiz.options.Count)
         {
             Debug.LogError("エラー: 選択肢インデックスが範囲外です。ボタン設定またはAPIデータに問題があります。Index: " + selectedOptionIndex + ", Options Count: " + currentQuiz.options.Count);
             return;
         }
 
-        // ここ（122行目付近）が安全になります
+        // 回答時にボタンを無効化（二重押し防止）
+        foreach (Button btn in optionButtons)
+        {
+            if (btn != null) btn.interactable = false;
+        }
+
         string selectedAnswer = currentQuiz.options[selectedOptionIndex];
         string correctAnswer = currentQuiz.correctAnswer;
+        bool isCorrect = (selectedAnswer == correctAnswer); // 正解フラグを定義
 
-        if (selectedAnswer == correctAnswer)
+        // 1. 解答履歴を記録するためにQuizApiClientを呼び出し
+        StartCoroutine(QuizApiClient.RegisterAnswer(currentQuiz.wordId, isCorrect));
+
+        if (isCorrect)
         {
             Debug.Log("正解！おめでとうございます！");
-            resultText.text = "正解！";
-            currentQuizIndex++;
-
+            if (resultText != null)
+            {
+                resultText.text = "正解！";
+            }
+            // 正解の場合、経験値計算のために難易度をリストに追加
+            correctDifficultyLevels.Add(currentQuiz.difficultyLevel);
+            correctAnswerCount++;
         }
         else
         {
             Debug.Log("残念、不正解です。");
-            resultText.text = "残念、不正解";
-            currentQuizIndex++;
+            if (resultText != null)
+            {
+                resultText.text = "残念、不正解";
+            }
         }
+
+        currentQuizIndex++;
         StartCoroutine(NextQuizAfterDelay(1.5f));
     }
+
     private IEnumerator NextQuizAfterDelay(float delay)
     {
         // メッセージ表示のため、一定時間待機
@@ -186,22 +254,60 @@ public class Quiz : MonoBehaviour
         // UIをリセット
         if (resultText != null) resultText.text = "";
 
-        // ボタンの有効化は DisplayQuiz の中で行います。
-
-        // ★修正: index が次のクイズへ進める状態かチェック★
+        // index が次のクイズへ進める状態かチェック
         if (currentQuizIndex < fetchedQuizzes.Count)
         {
-            DisplayQuiz(); // 次のクイズ（または同じクイズ）を表示
+            DisplayQuiz(); // 次のクイズを表示
         }
         else
         {
             Debug.Log("すべてのクイズが終了しました！Resultページへ遷移します。");
 
-            // 1. 終了メッセージを表示
-            questionText.text = "クイズ終了！";
-            if (resultText != null) resultText.text = "結果発表へ！";
+            // クイズ終了時に経験値計算と結果画面遷移を行う
+            yield return StartCoroutine(PostFinalScore());
 
-            // 2. ボタンを無効化（誤操作防止）
+            // 画面遷移の実行
+            SceneManager.LoadScene(resultSceneName);
+        }
+    }
+
+    // ★経験値計算と結果画面遷移のロジック (NextQuizAfterDelayから切り出し)★
+    private IEnumerator PostFinalScore()
+    {
+        // 1. UIを更新
+        if (questionText != null) questionText.text = "集計中...";
+        if (resultText != null) resultText.text = "経験値計算中...";
+
+        // 2. 経験値更新APIを呼び出し、結果を待機
+        ExperienceUpdateResult finalResult = null;
+        yield return StartCoroutine(
+            QuizApiClient.UpdateExperienceStatus(
+                CurrentUserId,
+                correctDifficultyLevels,
+                (result) => finalResult = result
+            )
+        );
+
+        // 3. 結果の表示（またはResultシーンに渡す処理）
+        if (finalResult != null)
+        {
+            Debug.Log($"最終獲得レベル: {finalResult.level}, レベルアップ: {finalResult.leveledUp}");
+            // finalResult のデータを保存し、Resultシーンで表示できるようにする
+            if (resultText != null) resultText.text = finalResult.leveledUp ? "レベルアップ！結果発表へ！" : "結果発表へ！";
+            if (QuizResultDataContainer.Instance != null)
+            {
+                QuizResultDataContainer.Instance.SetFinalResult(correctAnswerCount, finalResult);
+            }
+        }
+        else
+        {
+            Debug.LogError("経験値計算に失敗しました。");
+            if (resultText != null) resultText.text = "エラー発生。結果発表へ！";
+        }
+
+        // ボタンを無効化
+        if (optionButtons != null)
+        {
             foreach (Button btn in optionButtons)
             {
                 if (btn != null)
@@ -209,9 +315,6 @@ public class Quiz : MonoBehaviour
                     btn.interactable = false;
                 }
             }
-
-            // 3. ★画面遷移の実行★
-            SceneManager.LoadScene(resultSceneName);
         }
     }
 

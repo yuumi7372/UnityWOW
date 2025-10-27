@@ -18,6 +18,7 @@ public class LoginManager : MonoBehaviour
         public string token;
         public string username;
         public int level;
+        public string userId;
     }
 
     // ★追加: JSON送信用のデータ構造★
@@ -77,6 +78,7 @@ public class LoginManager : MonoBehaviour
                 PlayerPrefs.SetString("token", response.token);
                 PlayerPrefs.SetString("username", response.username);
                 PlayerPrefs.SetInt("level", response.level);
+                PlayerPrefs.SetString("userId", response.userId);
 
                 PlayerPrefs.SetInt("isLoggedIn", 1);
 
