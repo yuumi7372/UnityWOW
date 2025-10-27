@@ -33,6 +33,7 @@ public class Quiz : MonoBehaviour
 {
     // 取得したクイズデータを格納するリスト
     private List<QuizData> fetchedQuizzes;
+    private int correctAnswerCount = 0;
 
     // ユーザーIDはログイン時に取得し、ここで保持していると想定 (仮の値)
     private string CurrentUserId
@@ -57,9 +58,17 @@ public class Quiz : MonoBehaviour
 
     private int currentQuizIndex = 0;
 
+    // 修正内容: resultText.text = "がんばれ！"; の行はフィールド宣言部にあり、無効な構文です。
+    // UnityのMonoBehaviourでは、フィールド宣言部で直接値を代入できるのはフィールドのみです。
+    // resultText.text の初期化は Start() メソッド内で行う必要があります。
+
     void Start()
     {
         // 実際にはログイン成功後にFetchQuizzes()を呼び出すべきですが、テストのためStartに残します。
+        if (resultText != null)
+        {
+            resultText.text = "がんばれ！";
+        }
         FetchQuizzes();
     }
 
@@ -222,6 +231,7 @@ public class Quiz : MonoBehaviour
             }
             // 正解の場合、経験値計算のために難易度をリストに追加
             correctDifficultyLevels.Add(currentQuiz.difficultyLevel);
+            correctAnswerCount++;
         }
         else
         {
@@ -284,6 +294,10 @@ public class Quiz : MonoBehaviour
             Debug.Log($"最終獲得レベル: {finalResult.level}, レベルアップ: {finalResult.leveledUp}");
             // finalResult のデータを保存し、Resultシーンで表示できるようにする
             if (resultText != null) resultText.text = finalResult.leveledUp ? "レベルアップ！結果発表へ！" : "結果発表へ！";
+            if (QuizResultDataContainer.Instance != null)
+            {
+                QuizResultDataContainer.Instance.SetFinalResult(correctAnswerCount, finalResult);
+            }
         }
         else
         {
