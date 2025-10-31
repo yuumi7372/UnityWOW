@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
-
+using UnityEngine.UI;               
+using UnityEngine.SceneManagement;
 public class ResultSceneManager : MonoBehaviour
 {
     // UIコンポーネント (インスペクターから設定)
@@ -10,10 +11,20 @@ public class ResultSceneManager : MonoBehaviour
     public TextMeshProUGUI totalExpText;            // 総経験値
     public TextMeshProUGUI levelStatusText;         // 現在のレベル
     public TextMeshProUGUI levelUpMessageText;      // レベルアップメッセージ
+    public Button homeButton;
+    public string homeSceneName = "home";
 
     void Start()
     {
         DisplayResults();
+        if (homeButton != null)
+        {
+            homeButton.onClick.AddListener(GoToHomeScene);
+        }
+        else
+        {
+            Debug.LogError("Home Buttonがインスペクターで設定されていません！");
+        }
     }
 
     private void DisplayResults()
@@ -60,7 +71,19 @@ public class ResultSceneManager : MonoBehaviour
 
         resultTitleText.text = "クイズ結果発表！";
 
-        // データ使用後、このコンテナは次のクイズのためにリセットしても良い（要件による）
-        // container.ResetData();
+        // データをリセットして次回に備える
+        container.ResetData();
+    }
+    public void GoToHomeScene()
+    {
+        if (string.IsNullOrEmpty(homeSceneName))
+        {
+            Debug.LogError("ホームシーン名が設定されていません。インスペクターで設定してください！");
+            return;
+        }
+
+        // 遷移先のシーンをロード
+        Debug.Log($"シーン遷移: {homeSceneName} へ");
+        SceneManager.LoadScene(homeSceneName);
     }
 }

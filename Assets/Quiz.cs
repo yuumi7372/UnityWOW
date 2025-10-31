@@ -40,7 +40,7 @@ public class Quiz : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetString("userId", "1"); // デフォルトは "1"
+            return PlayerPrefs.GetString("userId", ""); // PlayerPrefsから取得する例
         }
     }
     // 正解した問題の難易度を一時的に保存するリスト
@@ -57,10 +57,6 @@ public class Quiz : MonoBehaviour
     public string resultSceneName = "quiz_result";
 
     private int currentQuizIndex = 0;
-
-    // 修正内容: resultText.text = "がんばれ！"; の行はフィールド宣言部にあり、無効な構文です。
-    // UnityのMonoBehaviourでは、フィールド宣言部で直接値を代入できるのはフィールドのみです。
-    // resultText.text の初期化は Start() メソッド内で行う必要があります。
 
     void Start()
     {
@@ -274,6 +270,8 @@ public class Quiz : MonoBehaviour
     // ★経験値計算と結果画面遷移のロジック (NextQuizAfterDelayから切り出し)★
     private IEnumerator PostFinalScore()
     {
+        Debug.Log($"UserId: {CurrentUserId}");
+        Debug.Log($"Difficulties Count: {correctDifficultyLevels.Count}");
         // 1. UIを更新
         if (questionText != null) questionText.text = "集計中...";
         if (resultText != null) resultText.text = "経験値計算中...";
@@ -291,6 +289,7 @@ public class Quiz : MonoBehaviour
         // 3. 結果の表示（またはResultシーンに渡す処理）
         if (finalResult != null)
         {
+            
             Debug.Log($"最終獲得レベル: {finalResult.level}, レベルアップ: {finalResult.leveledUp}");
             // finalResult のデータを保存し、Resultシーンで表示できるようにする
             if (resultText != null) resultText.text = finalResult.leveledUp ? "レベルアップ！結果発表へ！" : "結果発表へ！";
