@@ -44,6 +44,8 @@ public class PagesButton : MonoBehaviour
     {
         SceneManager.LoadScene("word");
     }
-
+    public void onClickGotohomebutton(){
+        SceneManager.LoadScene("home");
+    }
    
 }
