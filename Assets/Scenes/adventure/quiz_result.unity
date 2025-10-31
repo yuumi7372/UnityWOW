@@ -1149,7 +1149,7 @@ GameObject:
   - component: {fileID: 1334716478}
   - component: {fileID: 1334716477}
   m_Layer: 5
-  m_Name: Button
+  m_Name: HomeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1815,6 +1815,8 @@ MonoBehaviour:
   totalExpText: {fileID: 53400227}
   levelStatusText: {fileID: 1043688747}
   levelUpMessageText: {fileID: 322530840}
+  homeButton: {fileID: 1334716477}
+  homeSceneName: home
 --- !u!4 &1885977078
 Transform:
   m_ObjectHideFlags: 0

@@ -214,6 +214,43 @@ public class Quiz : MonoBehaviour
         string selectedAnswer = currentQuiz.options[selectedOptionIndex];
         string correctAnswer = currentQuiz.correctAnswer;
         bool isCorrect = (selectedAnswer == correctAnswer); // 正解フラグを定義
+       ColorBlock correctBlock = ColorBlock.defaultColorBlock; 
+        correctBlock.normalColor = Color.green;
+        correctBlock.highlightedColor = Color.green;
+        correctBlock.pressedColor = Color.green * 0.8f; 
+        correctBlock.selectedColor = Color.green;
+        correctBlock.disabledColor = Color.green;      
+        correctBlock.fadeDuration = 0.01f;
+        
+        ColorBlock incorrectBlock = ColorBlock.defaultColorBlock; 
+        incorrectBlock.disabledColor = Color.red;
+       
+        
+        ColorBlock defaultColors = ColorBlock.defaultColorBlock;
+        for (int i = 0; i < optionButtons.Length; i++)
+        {
+            if (optionButtons[i] != null)
+            {
+                // 正解のボタンを探す
+                bool isThisButtonCorrect = (currentQuiz.options[i] == correctAnswer);
+
+                if (i == selectedOptionIndex)
+                {
+                    // 選択したボタンの色を変更 (選択したボタンは無効化されるため、normalColorを変更)
+                    optionButtons[i].colors = isCorrect ? correctBlock : incorrectBlock;
+                }
+                else if (isThisButtonCorrect && !isCorrect)
+                {
+                    // 不正解を選んだ場合、正解のボタンも緑で表示
+                    optionButtons[i].colors = correctBlock;
+                }
+            }
+        }
+
+        foreach (Button btn in optionButtons)
+        {
+            if (btn != null) btn.interactable = false;
+        }
 
         // 1. 解答履歴を記録するためにQuizApiClientを呼び出し
         StartCoroutine(QuizApiClient.RegisterAnswer(currentQuiz.wordId, isCorrect));
@@ -246,7 +283,17 @@ public class Quiz : MonoBehaviour
     {
         // メッセージ表示のため、一定時間待機
         yield return new WaitForSeconds(delay);
-
+        ColorBlock initialColors = ColorBlock.defaultColorBlock;
+        if (optionButtons != null)
+        {
+            foreach (Button btn in optionButtons)
+            {
+                if (btn != null)
+                {
+                    btn.colors = initialColors; 
+                }
+            }
+        }
         // UIをリセット
         if (resultText != null) resultText.text = "";
 
