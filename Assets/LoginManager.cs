@@ -70,6 +70,7 @@ public class LoginManager : MonoBehaviour
 
                 // JSONをクラスに変換
                 LoginResponse response = JsonUtility.FromJson<LoginResponse>(json);
+                Debug.Log("取得したユーザーID: " + response.userId + " / トークン: " + response.token);
 
                 // デバッグ確認
                 Debug.Log("ログイン成功: " + response.username + " (Lv. " + response.level + ")");
