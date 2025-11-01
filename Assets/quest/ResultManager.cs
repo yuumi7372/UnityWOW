@@ -1,11 +1,14 @@
-﻿// QuestResultManager.cs (クエストバトル結果表示用)
+// ResultManager.cs
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System; // Exceptionのために必要
+using System;
+using System.Collections; // 💡 コルーチン (IEnumerator) のために必要
 
-public class QuestResultManager : MonoBehaviour
+// Note: QuestResultResponse, FinalUserCharacterStatus クラスは QuestData.cs などに定義されている必要があります。
+
+public class ResultManager : MonoBehaviour // 💡 クラス名が ResultManager であることを確認
 {
     // --- UIコンポーネント (Inspectorで設定) ---
     public TextMeshProUGUI resultTitleText;     // "クエストクリア" or "クエスト失敗"
@@ -25,6 +28,25 @@ public class QuestResultManager : MonoBehaviour
             returnToHomeButton.onClick.AddListener(ReturnToHome);
         }
 
+        // 💡 修正ポイント: Start()からコルーチンを呼び出し、QuestResultContainerの初期化を待つ 💡
+        StartCoroutine(LoadAndDisplayResults());
+    }
+
+    /// <summary>
+    /// QuestResultContainerの初期化を待ってから、結果データをロードします。
+    /// </summary>
+    private IEnumerator LoadAndDisplayResults()
+    {
+        // シングルトンが初期化されるのを待機
+        float startTime = Time.time;
+        float timeout = 2.0f; // 2秒でタイムアウト
+
+        // QuestResultContainer.Instance が非nullになるか、タイムアウトするまで待機
+        while (QuestResultContainer.Instance == null && Time.time < startTime + timeout)
+        {
+            yield return null; // 1フレーム待機
+        }
+
         // 前のシーンから渡されたデータを確認
         string resultJson = GetResultData();
 
@@ -34,24 +56,24 @@ public class QuestResultManager : MonoBehaviour
         }
         else
         {
-            // データがない場合はエラー表示
-            DisplayError("クエストデータが見つかりませんでした。");
+            // データが空の場合 or インスタンスが見つからない場合
+            DisplayError("クエストデータが見つかりませんでした。(コンテナからの取得失敗)");
         }
     }
 
     /// <summary>
-    /// QuestResultDataContainerから結果JSONを取得します。
+    /// QuestResultContainerから結果JSONを取得します。
     /// </summary>
     private string GetResultData()
     {
-        // シングルトンインスタンスからJSONを取得
-        if (QuestResultDataContainer.Instance != null)
+        if (QuestResultContainer.Instance != null)
         {
-            return QuestResultDataContainer.Instance.GetRawResultJson();
+            return QuestResultContainer.Instance.GetRawResultJson();
         }
         else
         {
-            Debug.LogWarning("QuestResultDataContainerのインスタンスが見つかりません。");
+            // ログのレベルを上げて、もしこのエラーが出たら重大な問題であることを示す
+            Debug.LogError("FATAL: QuestResultContainerのInstanceが見つかりませんでした。");
             return null;
         }
     }
@@ -134,12 +156,7 @@ public class QuestResultManager : MonoBehaviour
     /// </summary>
     public void ReturnToHome()
     {
-        // データコンテナを破棄
-        if (QuestResultDataContainer.Instance != null)
-        {
-            // シングルトンのgameObjectを破棄することで、DontDestroyOnLoadを解除
-            Destroy(QuestResultDataContainer.Instance.gameObject);
-        }
+        QuestResultContainer.DestroyInstance();
 
         SceneManager.LoadScene(homeSceneName);
     }
