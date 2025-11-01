@@ -42,7 +42,7 @@ public class WordListManager : MonoBehaviour
 
     IEnumerator LoadWordsFromServer()
     {
-        UnityWebRequest www = ApiClient.CreateGet("unity_get_words");
+        UnityWebRequest www = ApiClient.CreateGet("getwords");
         yield return www.SendWebRequest();
 
         if (www.result == UnityWebRequest.Result.Success)
