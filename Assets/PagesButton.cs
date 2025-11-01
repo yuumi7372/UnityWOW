@@ -32,8 +32,12 @@ public class PagesButton : MonoBehaviour
         SceneManager.LoadScene("gotoQuiz");
     }
     public void onClickranking()
-{
-    SceneManager.LoadScene("ranking");
-}
-   
+    {
+        SceneManager.LoadScene("ranking");
+    }
+    public void onClickCamerabutton()
+    {
+        SceneManager.LoadScene("camera");
+    }
+
 }

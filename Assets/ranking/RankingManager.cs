@@ -6,11 +6,10 @@ using System.Collections.Generic;
 
 public class RankingManager : MonoBehaviour
 {
-    // --- ŠO•”ƒRƒ“ƒ|[ƒlƒ“ƒg (Inspector‚Åİ’è) ---
     public RankingApiClient apiClient;
-    public GameObject rankingItemPrefab; // ƒ‰ƒ“ƒLƒ“ƒO‚Ìs‚Ìƒeƒ“ƒvƒŒ[ƒgUI (Prefab)
-    public Transform contentParent;       // ƒ‰ƒ“ƒLƒ“ƒO‚Ìs‚ğ¶¬‚·‚éeƒIƒuƒWƒFƒNƒg (Scroll View Content)
-    public TextMeshProUGUI statusText;   // ó‘Ô•\¦—pƒeƒLƒXƒg
+    public GameObject rankingItemPrefab; 
+    public Transform contentParent;       
+    public TextMeshProUGUI statusText;   
 
     void Start()
     {
@@ -19,7 +18,7 @@ public class RankingManager : MonoBehaviour
             apiClient = FindObjectOfType<RankingApiClient>();
             if (apiClient == null)
             {
-                Debug.LogError("RankingApiClient‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñBHierarchy‚É”z’u‚µ‚Ä‚­‚¾‚³‚¢B");
+                Debug.LogError("RankingApiClientãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚Hierarchyã«é…ç½®ã—ã¦ãã ã•ã„ã€‚");
                 return;
             }
         }
@@ -29,9 +28,8 @@ public class RankingManager : MonoBehaviour
 
     public void FetchAndDisplayRanking()
     {
-        if (statusText != null) statusText.text = "ƒ‰ƒ“ƒLƒ“ƒO‚ğƒ[ƒh’†...";
+        if (statusText != null) statusText.text = "ãƒ©ãƒ³ã‚­ãƒ³ã‚°ã‚’ãƒ­ãƒ¼ãƒ‰ä¸­...";
 
-        // Šù‘¶‚Ìƒ‰ƒ“ƒLƒ“ƒOƒAƒCƒeƒ€‚ğƒNƒŠƒA
         foreach (Transform child in contentParent)
         {
             Destroy(child.gameObject);
@@ -42,7 +40,7 @@ public class RankingManager : MonoBehaviour
 
     private void OnRankingSuccess(RankingItem[] rankingItems)
     {
-        if (statusText != null) statusText.text = $"ƒ‰ƒ“ƒLƒ“ƒOæ“¾¬Œ÷I (‘S {rankingItems.Length} ˆÊ)";
+        if (statusText != null) statusText.text = $"ãƒ©ãƒ³ã‚­ãƒ³ã‚°ã‚’å–å¾—ã—ã¾ã—ãŸ (å…¨ {rankingItems.Length} ä»¶)";
 
         for (int i = 0; i < rankingItems.Length; i++)
         {
@@ -52,17 +50,15 @@ public class RankingManager : MonoBehaviour
 
     private void OnRankingFailure(string errorMessage)
     {
-        if (statusText != null) statusText.text = $"ƒ‰ƒ“ƒLƒ“ƒOæ“¾¸”s: {errorMessage}";
+        if (statusText != null) statusText.text = $"ãƒ©ãƒ³ã‚­ãƒ³ã‚°å–å¾—å¤±æ•—: {errorMessage}";
     }
 
     private void CreateRankingItem(int rank, RankingItem item)
     {
         if (rankingItemPrefab == null || contentParent == null) return;
 
-        // ƒvƒŒƒnƒu‚ğContent“à‚É¶¬
         GameObject newItem = Instantiate(rankingItemPrefab, contentParent);
 
-        // ƒvƒŒƒnƒu“à‚ÌUI—v‘f‚ğæ“¾‚µAƒf[ƒ^‚ğİ’è
         // "RankText"
         Transform rankTextTransform = newItem.transform.Find("RankText");
         if (rankTextTransform != null)
@@ -96,6 +92,5 @@ public class RankingManager : MonoBehaviour
             }
         }
 
-        // Note: ƒLƒƒƒ‰ƒNƒ^[‰æ‘œ‚Ì•\¦‚É‚ÍAURL‚©‚ç‚Ì‰æ‘œƒ[ƒhˆ—i•Ê“rÀ‘•‚ª•K—v‚Èˆ—j‚ª•K—v‚Å‚·B
     }
 }
