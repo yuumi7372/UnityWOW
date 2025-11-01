@@ -28,7 +28,7 @@ public class RankingManager : MonoBehaviour
 
     public void FetchAndDisplayRanking()
     {
-        if (statusText != null) statusText.text = "ランキングをロード中...";
+        if (statusText != null) statusText.text = "ロード中...";
 
         foreach (Transform child in contentParent)
         {
@@ -40,7 +40,7 @@ public class RankingManager : MonoBehaviour
 
     private void OnRankingSuccess(RankingItem[] rankingItems)
     {
-        if (statusText != null) statusText.text = $"ランキングを取得しました (全 {rankingItems.Length} 件)";
+        if (statusText != null) statusText.text = $"ランキング";
 
         for (int i = 0; i < rankingItems.Length; i++)
         {
@@ -60,7 +60,8 @@ public class RankingManager : MonoBehaviour
         GameObject newItem = Instantiate(rankingItemPrefab, contentParent);
 
         // "RankText"
-        Transform rankTextTransform = newItem.transform.Find("RankText");
+        Transform rankAreaTransform = newItem.transform.Find("RankArea");
+        Transform rankTextTransform = rankAreaTransform.Find("RankText");
         if (rankTextTransform != null)
         {
             TextMeshProUGUI rankText = rankTextTransform.GetComponent<TextMeshProUGUI>();
