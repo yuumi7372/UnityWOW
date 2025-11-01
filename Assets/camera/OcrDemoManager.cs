@@ -85,7 +85,6 @@ public class OcrDemoManager : MonoBehaviour
         return texture.EncodeToPNG();
     }
 
-    // 💖 修正後の成功コールバック 💖
     private void OnOcrSuccess(TranslatedLabel[] labels)
     {
         analyzeButton.interactable = true;
