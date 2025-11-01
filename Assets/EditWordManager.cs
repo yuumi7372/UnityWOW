@@ -17,7 +17,7 @@ public class EditWordManager : MonoBehaviour
         deleteButton.onClick.AddListener(OnDeleteButtonClicked);
     }
 
-    void OnDeleteButtonClicked()
+    public void OnDeleteButtonClicked()
     {
         StartCoroutine(DeleteWordCoroutine());
     }
