@@ -1,29 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PagesButton : MonoBehaviour
 {
-    public GameObject startButton;
-    public GameObject loginPanel;
-
-
-    public void OnClickStartbutton()
-    {
-        // ログイン済みかチェック
-        int isLoggedIn = PlayerPrefs.GetInt("isLoggedIn", 0);
-
-        if (isLoggedIn == 1)
-        {
-            // すでにログイン済み → ゲームのホームページへ
-            SceneManager.LoadScene("home");
-        }
-        else
-        {
-            // 未ログイン → ログインUIを表示
-            startButton.SetActive(false);   // スタートボタンを非表示
-            loginPanel.SetActive(true);     // ログインパネルを表示
-        }
-    }
 
     public void OnClickQuestbutton()
     {
@@ -47,10 +27,9 @@ public class PagesButton : MonoBehaviour
     public void onClickGotohomebutton(){
         SceneManager.LoadScene("home");
     }
-
     public void onClickranking()
-    {
-        SceneManager.LoadScene("ranking");
-    }
-
+{
+    SceneManager.LoadScene("ranking");
+}
+   
 }
