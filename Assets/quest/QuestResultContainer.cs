@@ -1,60 +1,59 @@
-// QuestResultDataContainer.cs
+// QuestResultContainer.cs
 using UnityEngine;
 
-/// <summary>
-/// クエスト結果のJSON文字列を、シーンをまたいで保持するためのシングルトンコンテナ。
-/// </summary>
 public class QuestResultContainer : MonoBehaviour
 {
-    // 💡 シングルトンインスタンスへの静的なアクセスポイント
+    // シングルトンインスタンス
     public static QuestResultContainer Instance { get; private set; }
 
-    // 保持する生のJSON文字列データ
+    // 結果データを保持する変数
     private string rawResultJson;
 
-    void Awake()
+    // --- 初期化と永続化 ---
+    private void Awake()
     {
-        // シングルトンの初期化ロジック
         if (Instance == null)
         {
+            // 最初にロードされたインスタンスを保持
             Instance = this;
-            // 💡 シーンを切り替えてもこのGameObjectが破棄されないようにする
+
+            // 💡 永続化の最重要設定 💡
+            // このオブジェクトをシーンが切り替わっても破棄されないようにする
             DontDestroyOnLoad(gameObject);
+
+            Debug.Log("QuestResultContainer: 永続化インスタンスが設定されました。");
         }
-        else // 既にインスタンスが存在する場合
+        else
         {
-            // 新しく作成されたGameObjectを破棄する
+            // 2つ目以降のインスタンスは破棄
             Destroy(gameObject);
+            Debug.LogWarning("QuestResultContainer: 重複インスタンスを破棄しました。");
         }
     }
 
-    /// <summary>
-    /// APIから取得した結果JSON文字列を保存します。
-    /// QuestManager の OnGetResultSuccess メソッド内で呼び出されます。
-    /// </summary>
-    /// <param name="json">/quest/result APIから取得した生のJSON文字列</param>
+    // --- データ保存/取得 ---
+
     public void SetRawResultJson(string json)
     {
-        rawResultJson = json;
-        Debug.Log("コンテナにクエスト結果JSONデータが保存されました。");
+        this.rawResultJson = json;
     }
 
-    /// <summary>
-    /// 保存されている結果JSON文字列を取得します。
-    /// QuestResultManager の Start メソッド内で呼び出されます。
-    /// </summary>
-    /// <returns>保存された生のJSON文字列</returns>
     public string GetRawResultJson()
     {
         return rawResultJson;
     }
 
-    /// <summary>
-    /// データをリセットします。次のクエストに備えて、シーン遷移時にDestroyされる前のオブジェクトから呼び出すことを推奨します。
-    /// </summary>
-    public void ResetData()
+    // --- シーン遷移後のクリーンアップ（オプション） ---
+
+    // 結果画面でデータを使用した後、破棄するためのヘルパーメソッド
+    // QuestResultManager.cs の ReturnToHome() メソッドから呼ばれることを想定
+    public static void DestroyInstance()
     {
-        rawResultJson = null;
-        Debug.Log("QuestResultDataContainerのデータをリセットしました。");
+        if (Instance != null)
+        {
+            Destroy(Instance.gameObject);
+            Instance = null; // インスタンス参照をクリア
+            Debug.Log("QuestResultContainer: インスタンスを破棄しました。");
+        }
     }
 }

@@ -41,6 +41,7 @@ public class QuestApiClient : MonoBehaviour
 
             if (webRequest.result == UnityWebRequest.Result.Success)
             {
+                Debug.Log("DEBUG (Server Response Text): " + webRequest.downloadHandler.text);
                 // JSONデータをデシリアライズ
                 T responseData = JsonUtility.FromJson<T>(webRequest.downloadHandler.text);
                 onSuccess?.Invoke(responseData);
@@ -119,7 +120,7 @@ public class QuestApiClient : MonoBehaviour
     // ===============================================
     // 3. /quest/result の呼び出し
     // ===============================================
-    public void GetQuestResult(int sessionId, System.Action<string> onSuccess, OnRequestFailed onFailure)
+    public void GetQuestResult(int sessionId, System.Action<QuestResultResponse> onSuccess, OnRequestFailed onFailure)
     {
         // クエリパラメータを使用
         StartCoroutine(SendGetRequest($"/quest/result?questSessionId={sessionId}", onSuccess, onFailure));

@@ -208,28 +208,37 @@ public class QuestManager : MonoBehaviour
         }
 
         // 結果取得APIを呼び出し、コールバックでデータを保存し遷移
-        apiClient.GetQuestResult(currentQuestSessionId, OnGetResultSuccess_SaveAndTransition, OnApiRequestFailed);
+        apiClient.GetQuestResult(
+            currentQuestSessionId,
+            OnGetResultSuccess_SaveAndTransition,
+            OnApiRequestFailed
+        );
+
     }
 
     // データ保存と遷移を担当するメソッド (OnGetResultSuccessの曖昧さ回避のためリネーム)
-    private void OnGetResultSuccess_SaveAndTransition(string resultJson)
+    private void OnGetResultSuccess_SaveAndTransition(QuestResultResponse response)
     {
         Debug.Log("クエスト結果取得完了。結果画面へ遷移します。");
+        string resultJson = JsonUtility.ToJson(response);
 
-        // 💡 結果JSONデータをシングルトンコンテナに保存 💡
-        // QuestResultDataContainer (またはリネームした QuestResultContainer) にアクセス
-        QuestResultDataContainer container = FindObjectOfType<QuestResultDataContainer>();
-
-        if (container != null)
+        if (QuestResultContainer.Instance != null)
         {
-            container.SetRawResultJson(resultJson);
-            Debug.Log("結果JSONデータをコンテナに保存しました。");
+            // JSON文字列が空でないか確認
+            if (!string.IsNullOrEmpty(resultJson) && resultJson != "{}") // {} も空とみなす
+            {
+                QuestResultContainer.Instance.SetRawResultJson(resultJson);
+                Debug.Log("結果JSONデータをコンテナに保存しました。");
+            }
+            else
+            {
+                Debug.LogError("保存失敗: APIからの結果JSONが空またはnullです。サーバー側の GetQuestResultHandler を確認してください。");
+            }
         }
         else
         {
-            Debug.LogError("QuestResultDataContainer がシーンに見つかりません。");
+            Debug.LogError("保存失敗: QuestResultContainerの永続化インスタンスが見つかりません。");
         }
-
         // 画面遷移
         SceneManager.LoadScene(resultSceneName);
     }
