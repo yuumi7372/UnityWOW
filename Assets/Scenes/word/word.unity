@@ -1460,7 +1460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 5000927251509650613, guid: d8f54dbd5ebecce40a412fbfcfbe65e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1490,8 +1490,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d3ef7a8a9f14e49868b4d06ef9b3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PagesButton
-  startButton: {fileID: 0}
-  loginPanel: {fileID: 0}
 --- !u!1 &581171099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,7 +2719,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &952822653
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6340,8 +6338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d3ef7a8a9f14e49868b4d06ef9b3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PagesButton
-  startButton: {fileID: 0}
-  loginPanel: {fileID: 0}
 --- !u!4 &1969654964
 Transform:
   m_ObjectHideFlags: 0
