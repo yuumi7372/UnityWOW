@@ -47,5 +47,10 @@ public class PagesButton : MonoBehaviour
     public void onClickGotohomebutton(){
         SceneManager.LoadScene("home");
     }
-   
+
+    public void onClickranking()
+    {
+        SceneManager.LoadScene("ranking");
+    }
+
 }
