@@ -13,6 +13,7 @@ public class EditWordManager : MonoBehaviour
     private HashSet<string> existingWords = new HashSet<string>();  //既存単語の管理
     // 画面上部に単語を表示するためのTMPコンポーネント
     public TextMeshProUGUI wordDisplayTMP;
+    public TextMeshProUGUI meaningDisplayTMP;
 
 
     void Start()
@@ -20,11 +21,17 @@ public class EditWordManager : MonoBehaviour
         wordId = EditWordData.wordId;
 
         string wordToDisplay = EditWordData.word; 
+        string meaningToDisplay = EditWordData.meaning;
 
         // ★単語を表示
         if (wordDisplayTMP != null)
         {
             wordDisplayTMP.text = wordToDisplay; // 取得した単語を表示
+        } 
+        //意味の表示
+        if (meaningDisplayTMP != null)
+        {
+            meaningDisplayTMP.text = meaningToDisplay; // 取得した単語を表示
         } 
         Debug.Log("削除対象の単語ID: " + wordId);
         deleteButton.onClick.AddListener(OnDeleteButtonClicked);
