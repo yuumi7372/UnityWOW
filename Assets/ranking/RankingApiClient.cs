@@ -5,8 +5,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Text;
 
-// Note: QuestApiClient ‚Æ‚Ì¬“¯‚ğ”ğ‚¯‚é‚½‚ßA•Êƒtƒ@ƒCƒ‹‚Ü‚½‚Í QuestApiClient ‚Éƒƒ\ƒbƒh‚ğ’Ç‰Á‚µ‚Ä‚à—Ç‚¢‚Å‚·‚ªA
-// ‚±‚±‚Å‚Í“Æ—§‚µ‚½ƒNƒ‰ƒCƒAƒ“ƒg‚Æ‚µ‚Äì¬‚µ‚Ü‚·B
 
 public class RankingApiClient : MonoBehaviour
 {
@@ -20,24 +18,19 @@ public class RankingApiClient : MonoBehaviour
     public delegate void OnRequestFailed(string errorMessage);
 
     /// <summary>
-    /// ƒ‰ƒ“ƒLƒ“ƒOƒf[ƒ^‚ğæ“¾‚µAƒfƒVƒŠƒAƒ‰ƒCƒY‚µ‚Ü‚·B
     /// </summary>
     public void FetchRanking(Action<RankingItem[]> onSuccess, OnRequestFailed onFailure)
     {
-        // ”FØ‚ª•s—v‚ÈAPI‚Å‚ ‚éê‡‚ÍAauthenticateToken ƒ~ƒhƒ‹ƒEƒFƒA‚ğŠO‚µ‚Ä‚­‚¾‚³‚¢B
-        // ‚±‚±‚Å‚ÍAƒ‰ƒ“ƒLƒ“ƒOæ“¾‚É‚Í”FØ‚ª•s—v‚Å‚ ‚é‚Æ‰¼’è‚µAƒg[ƒNƒ“ƒ`ƒFƒbƒN‚ÍƒXƒLƒbƒv‚µ‚Ü‚·B
 
         StartCoroutine(SendGetRankingRequest(onSuccess, onFailure));
     }
 
     private IEnumerator SendGetRankingRequest(Action<RankingItem[]> onSuccess, OnRequestFailed onFailure)
     {
-        // Express‚Å /ranking ƒ‹[ƒg‚Éİ’è‚µ‚½‚±‚Æ‚ğ‘z’è
         string url = $"{API_BASE_URL}/ranking";
 
         using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
         {
-            // ?? ƒ‰ƒ“ƒLƒ“ƒOAPI‚É”FØ‚ª•K—v‚Èê‡‚ÍAˆÈ‰º‚Ìs‚ğƒRƒƒ“ƒg‰ğœ‚µ‚Ä‚­‚¾‚³‚¢
             // if (!string.IsNullOrEmpty(jwtToken)) {
             //     webRequest.SetRequestHeader("Authorization", $"Bearer {jwtToken}");
             // }
@@ -47,11 +40,10 @@ public class RankingApiClient : MonoBehaviour
             if (webRequest.result == UnityWebRequest.Result.Success)
             {
                 string jsonString = webRequest.downloadHandler.text;
-                Debug.Log("ƒ‰ƒ“ƒLƒ“ƒOJSONæ“¾¬Œ÷: " + jsonString);
+                Debug.Log("ãƒ©ãƒ³ã‚­ãƒ³ã‚°JSONã‚’å–å¾—ã—ã¾ã—ãŸã€‚" + jsonString);
 
                 try
                 {
-                    // JSONUtility‚Å”z—ñ‚ğƒfƒVƒŠƒAƒ‰ƒCƒY‚·‚é‚½‚ßAƒ‰ƒbƒp[‚ğg—p‚µ‚Ü‚·
                     string wrappedJson = "{ \"ranking\": " + jsonString + "}";
                     RankingListWrapper wrapper = JsonUtility.FromJson<RankingListWrapper>(wrappedJson);
 
@@ -61,13 +53,13 @@ public class RankingApiClient : MonoBehaviour
                     }
                     else
                     {
-                        throw new Exception("ƒ‰ƒ“ƒLƒ“ƒOƒf[ƒ^‚Ìƒp[ƒX‚É¸”s‚µ‚Ü‚µ‚½B");
+                        throw new Exception("ãƒ©ãƒ³ã‚­ãƒ³ã‚°ãƒ‡ãƒ¼ã‚¿ã®ãƒ‘ãƒ¼ã‚¹ã«å¤±æ•—ã—ã¾ã—ãŸã€‚");
                     }
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError("ƒ‰ƒ“ƒLƒ“ƒOƒp[ƒXƒGƒ‰[: " + e.Message);
-                    onFailure?.Invoke("ƒ‰ƒ“ƒLƒ“ƒOƒf[ƒ^‚ÌŒ`®ƒGƒ‰[: " + e.Message);
+                    Debug.LogError("ãƒ©ãƒ³ã‚­ãƒ³ã‚°ãƒ‘ãƒ¼ã‚¹ã‚¨ãƒ©ãƒ¼" + e.Message);
+                    onFailure?.Invoke("ãƒ©ãƒ³ã‚­ãƒ³ã‚°ãƒ‡ãƒ¼ã‚¿ã®å½¢å¼ã‚¨ãƒ©ãƒ¼" + e.Message);
                 }
             }
             else
