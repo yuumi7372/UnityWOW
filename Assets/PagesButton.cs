@@ -28,8 +28,12 @@ public class PagesButton : MonoBehaviour
         SceneManager.LoadScene("home");
     }
     public void onClickranking()
-{
-    SceneManager.LoadScene("ranking");
-}
-   
+    {
+        SceneManager.LoadScene("ranking");
+    }
+    public void onClickCamerabutton()
+    {
+        SceneManager.LoadScene("camera");
+    }
+
 }
