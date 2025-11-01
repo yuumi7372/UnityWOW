@@ -4190,6 +4190,7 @@ GameObject:
   - component: {fileID: 2034242708}
   - component: {fileID: 2034242707}
   - component: {fileID: 2034242706}
+  - component: {fileID: 2034242709}
   - component: {fileID: 2034242705}
   m_Layer: 5
   m_Name: Button (Legacy)
@@ -4275,7 +4276,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2034242707}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2034242709}
+        m_TargetAssemblyTypeName: PagesButton, Assembly-CSharp
+        m_MethodName: onClickranking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2034242707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4314,6 +4327,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034242703}
   m_CullTransparentMesh: 1
+--- !u!114 &2034242709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034242703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d3ef7a8a9f14e49868b4d06ef9b3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PagesButton
+  startButton: {fileID: 0}
+  loginPanel: {fileID: 0}
 --- !u!1 &2052711063
 GameObject:
   m_ObjectHideFlags: 0
