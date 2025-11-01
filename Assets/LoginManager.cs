@@ -10,7 +10,7 @@ public class LoginManager : MonoBehaviour
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
     public Button loginButton;
-    public PagesButton pagesButton;
+    public TapToLogin tapToLogin;
 
     [System.Serializable]
     public class LoginResponse
@@ -84,8 +84,8 @@ public class LoginManager : MonoBehaviour
                 PlayerPrefs.SetInt("isLoggedIn", 1);
 
                 // ログインパネルを閉じてスタートボタンを再表示
-                pagesButton.startButton.SetActive(true);
-                pagesButton.loginPanel.SetActive(false);
+                //pagesButton.startButton.SetActive(true);
+                tapToLogin.loginPanel.SetActive(false);
             }
             else
             {
