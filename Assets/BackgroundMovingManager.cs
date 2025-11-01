@@ -3,22 +3,26 @@ using UnityEngine.UI;
 
 public class BackgroundMovingManager : MonoBehaviour
 {
-    public RawImage image;            // 背景画像
-    public float scrollSpeed = 0.05f; // スクロール速度（＋で右、－で左）
-    private Vector2 offset = Vector2.zero;
+    public float scrollSpeed = 0.1f;
+    private RawImage rawImage;
+
+    void Start()
+    {
+        rawImage = GetComponent<RawImage>();
+        if (rawImage == null)
+        {
+            Debug.LogError("❌ RawImage がアタッチされてないよ！");
+        }
+    }
 
     void Update()
     {
-        if (image == null) return;
+        if (rawImage == null) return;
 
-        // 横方向に動かす
-        offset.x += scrollSpeed * Time.deltaTime;
+        // UVを縦にスクロール
+        Vector2 offset = rawImage.uvRect.position;
+        offset.y += scrollSpeed * Time.deltaTime;
 
-        // スクロールが大きくなりすぎないようにループ
-        if (offset.x > 1f) offset.x -= 1f;
-        if (offset.x < -1f) offset.x += 1f;
-
-        // 背景を動かす
-        image.uvRect = new Rect(offset, image.uvRect.size);
+        rawImage.uvRect = new Rect(offset, rawImage.uvRect.size);
     }
 }

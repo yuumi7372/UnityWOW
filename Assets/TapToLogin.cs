@@ -1,23 +1,24 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class TapToLogin : MonoBehaviour
 {
     public GameObject loginPanel;
+    public RocketMoving rocket;
+    public GameObject tapToStartUI; // ★追加★ TapToStartのUI
 
     void Update()
     {
-        // パネルがすでに出ていたら反応しない
+        // パネルが出ていたら反応しない
         if (loginPanel.activeSelf) return;
 
         bool tapped = false;
 
-        // PCクリック
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
             tapped = true;
 
-        // スマホタップ（押した瞬間だけ反応）
         if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
             tapped = true;
 
@@ -33,14 +34,31 @@ public class TapToLogin : MonoBehaviour
 
         if (isLoggedIn == 1)
         {
-            // ログイン済み → ホーム画面へ
-            SceneManager.LoadScene("home");
+            // ★TapToStartを消す★
+            if (tapToStartUI != null)
+                tapToStartUI.SetActive(false);
+
+            // ロケットを上に飛ばすフラグをセット
+            if (rocket != null)
+            {
+                rocket.goToHome = true;
+                StartCoroutine(GoHomeAfterDelay(1f)); // 1秒後にホームに遷移
+            }
+            else
+            {
+                SceneManager.LoadScene("home");
+            }
         }
         else
         {
-            // 未ログイン → ログインパネル表示
-            if (!loginPanel.activeSelf) // すでに開いていなければ
+            if (!loginPanel.activeSelf)
                 loginPanel.SetActive(true);
         }
+    }
+
+    private IEnumerator GoHomeAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("home");
     }
 }

@@ -11,6 +11,9 @@ public class LoginManager : MonoBehaviour
     public TMP_InputField passwordInput;
     public Button loginButton;
     public TapToLogin tapToLogin;
+    public GameObject tapToStart; // Inspectorでセット
+
+    
 
     [System.Serializable]
     public class LoginResponse
@@ -83,9 +86,11 @@ public class LoginManager : MonoBehaviour
 
                 PlayerPrefs.SetInt("isLoggedIn", 1);
 
-                // ログインパネルを閉じてスタートボタンを再表示
-                //pagesButton.startButton.SetActive(true);
+                // ログインパネルを閉じてtap to startを再表示
                 tapToLogin.loginPanel.SetActive(false);
+                if (tapToStart != null)
+                    tapToStart.gameObject.SetActive(true);
+                
             }
             else
             {
