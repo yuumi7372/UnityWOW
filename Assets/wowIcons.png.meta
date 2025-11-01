@@ -1,0 +1,5057 @@
+fileFormatVersion: 2
+guid: 741cac7d421e3b54a93c7fb8d63a3b46
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2570561524265011962
+    second: wowIcons_0
+  - first:
+      213: 4740958215012250830
+    second: wowIcons_1
+  - first:
+      213: 6399895287090031179
+    second: wowIcons_2
+  - first:
+      213: -650633342979268788
+    second: wowIcons_3
+  - first:
+      213: 594343819390072956
+    second: wowIcons_4
+  - first:
+      213: 871518530589283004
+    second: wowIcons_5
+  - first:
+      213: 1943117919920948588
+    second: wowIcons_6
+  - first:
+      213: -805814591052713095
+    second: wowIcons_7
+  - first:
+      213: 4949496282331988208
+    second: wowIcons_8
+  - first:
+      213: -1564586284171517324
+    second: wowIcons_9
+  - first:
+      213: -1141474678454778470
+    second: wowIcons_10
+  - first:
+      213: -8978973376658640613
+    second: wowIcons_11
+  - first:
+      213: 8729189651861623061
+    second: wowIcons_12
+  - first:
+      213: 3950774822367449160
+    second: wowIcons_13
+  - first:
+      213: -2524235134099223048
+    second: wowIcons_14
+  - first:
+      213: -7520561445420796591
+    second: wowIcons_15
+  - first:
+      213: -5143024991736965194
+    second: wowIcons_16
+  - first:
+      213: -4215146536708336566
+    second: wowIcons_17
+  - first:
+      213: 8917255265667173332
+    second: wowIcons_18
+  - first:
+      213: -3377239402779864576
+    second: wowIcons_19
+  - first:
+      213: -313885304194585648
+    second: wowIcons_20
+  - first:
+      213: -2306535179867310217
+    second: wowIcons_21
+  - first:
+      213: 7869056688421292617
+    second: wowIcons_22
+  - first:
+      213: 1944999451869333046
+    second: wowIcons_23
+  - first:
+      213: 6259376674351520292
+    second: wowIcons_24
+  - first:
+      213: 7915631542434193983
+    second: wowIcons_25
+  - first:
+      213: -8115788781044367015
+    second: wowIcons_26
+  - first:
+      213: 6187159897081337318
+    second: wowIcons_27
+  - first:
+      213: -4441056090909991697
+    second: wowIcons_28
+  - first:
+      213: 2298195625891038290
+    second: wowIcons_29
+  - first:
+      213: 3403455476531232975
+    second: wowIcons_30
+  - first:
+      213: -6114272253408825718
+    second: wowIcons_31
+  - first:
+      213: 1305108364786834962
+    second: wowIcons_32
+  - first:
+      213: -7834340743973920857
+    second: wowIcons_33
+  - first:
+      213: -3093780508463772320
+    second: wowIcons_34
+  - first:
+      213: 2873323581904275478
+    second: wowIcons_35
+  - first:
+      213: 2027907564809136431
+    second: wowIcons_36
+  - first:
+      213: 6800939670935826525
+    second: wowIcons_37
+  - first:
+      213: -2664302843722355131
+    second: wowIcons_38
+  - first:
+      213: 9106983329642612991
+    second: wowIcons_39
+  - first:
+      213: 4836762468545937528
+    second: wowIcons_40
+  - first:
+      213: -1723833763272068726
+    second: wowIcons_41
+  - first:
+      213: 6577034676206139486
+    second: wowIcons_42
+  - first:
+      213: -5130909755894653816
+    second: wowIcons_43
+  - first:
+      213: 625763586076157568
+    second: wowIcons_44
+  - first:
+      213: -2592339012010232848
+    second: wowIcons_45
+  - first:
+      213: -8841786860818032236
+    second: wowIcons_46
+  - first:
+      213: 103356288462314855
+    second: wowIcons_47
+  - first:
+      213: 2249263997378900154
+    second: wowIcons_48
+  - first:
+      213: 984424610603751435
+    second: wowIcons_49
+  - first:
+      213: -5179498674183062366
+    second: wowIcons_50
+  - first:
+      213: -6368122088745036258
+    second: wowIcons_51
+  - first:
+      213: -8461885408236488154
+    second: wowIcons_52
+  - first:
+      213: 4618631481019262891
+    second: wowIcons_53
+  - first:
+      213: 3250283758092120184
+    second: wowIcons_54
+  - first:
+      213: -3917564954812833752
+    second: wowIcons_55
+  - first:
+      213: -7942433233381714247
+    second: wowIcons_56
+  - first:
+      213: 400804311957114141
+    second: wowIcons_57
+  - first:
+      213: -8683400512148363650
+    second: wowIcons_58
+  - first:
+      213: 6446736846945736075
+    second: wowIcons_59
+  - first:
+      213: -5778447386153305777
+    second: wowIcons_60
+  - first:
+      213: 3055398103034670497
+    second: wowIcons_61
+  - first:
+      213: -8094819358656353669
+    second: wowIcons_62
+  - first:
+      213: 8299790917034502368
+    second: wowIcons_63
+  - first:
+      213: 6928127935583636429
+    second: wowIcons_64
+  - first:
+      213: 7391465349907441847
+    second: wowIcons_65
+  - first:
+      213: -7951937453264044309
+    second: wowIcons_66
+  - first:
+      213: 2419309775199536627
+    second: wowIcons_67
+  - first:
+      213: -8868998960022460318
+    second: wowIcons_68
+  - first:
+      213: 626397130121326042
+    second: wowIcons_69
+  - first:
+      213: -5855789002922692112
+    second: wowIcons_70
+  - first:
+      213: 5144646167744569342
+    second: wowIcons_71
+  - first:
+      213: -331050871909027746
+    second: wowIcons_72
+  - first:
+      213: -7433238148523566622
+    second: wowIcons_73
+  - first:
+      213: -2112346843763976677
+    second: wowIcons_74
+  - first:
+      213: 201593893052419603
+    second: wowIcons_75
+  - first:
+      213: 8862140590940052059
+    second: wowIcons_76
+  - first:
+      213: 1179338409916942413
+    second: wowIcons_77
+  - first:
+      213: 8351717860586830631
+    second: wowIcons_78
+  - first:
+      213: -6787032241825607928
+    second: wowIcons_79
+  - first:
+      213: 2184914120888297630
+    second: wowIcons_80
+  - first:
+      213: 840606717244661251
+    second: wowIcons_81
+  - first:
+      213: -5831128539041769889
+    second: wowIcons_82
+  - first:
+      213: 323776615910689510
+    second: wowIcons_83
+  - first:
+      213: -49110267598429573
+    second: wowIcons_84
+  - first:
+      213: 6916264825364602680
+    second: wowIcons_85
+  - first:
+      213: -8407843835949715970
+    second: wowIcons_86
+  - first:
+      213: 6240239348251509417
+    second: wowIcons_87
+  - first:
+      213: -5798275993658966841
+    second: wowIcons_88
+  - first:
+      213: -4907823478926497507
+    second: wowIcons_89
+  - first:
+      213: 2426766875233993307
+    second: wowIcons_90
+  - first:
+      213: -6350753441672926073
+    second: wowIcons_91
+  - first:
+      213: -8991993387809718629
+    second: wowIcons_92
+  - first:
+      213: 79932400900041263
+    second: wowIcons_93
+  - first:
+      213: 3031343647325218615
+    second: wowIcons_94
+  - first:
+      213: -1087070591833380070
+    second: wowIcons_95
+  - first:
+      213: 6459394130098132449
+    second: wowIcons_96
+  - first:
+      213: 2563701639121251888
+    second: wowIcons_97
+  - first:
+      213: -7765140700182964733
+    second: wowIcons_98
+  - first:
+      213: -3225077148064397322
+    second: wowIcons_99
+  - first:
+      213: 5776036464717336252
+    second: wowIcons_100
+  - first:
+      213: -6540057240154748890
+    second: wowIcons_101
+  - first:
+      213: 4906800465966287746
+    second: wowIcons_102
+  - first:
+      213: -1496687715718338377
+    second: wowIcons_103
+  - first:
+      213: 3017144474107776260
+    second: wowIcons_104
+  - first:
+      213: 8497750903333256560
+    second: wowIcons_105
+  - first:
+      213: 3552221926628326229
+    second: wowIcons_106
+  - first:
+      213: 7193470493932204422
+    second: wowIcons_107
+  - first:
+      213: 4171968400347298516
+    second: wowIcons_108
+  - first:
+      213: 2345256114570409815
+    second: wowIcons_109
+  - first:
+      213: 1870093515074208606
+    second: wowIcons_110
+  - first:
+      213: -1252093916238605859
+    second: wowIcons_111
+  - first:
+      213: 8915230388002069877
+    second: wowIcons_112
+  - first:
+      213: -4903532376342988409
+    second: wowIcons_113
+  - first:
+      213: 2011276741901800815
+    second: wowIcons_114
+  - first:
+      213: 4946587901213492571
+    second: wowIcons_115
+  - first:
+      213: -6678851235081462658
+    second: wowIcons_116
+  - first:
+      213: -2068541260187443265
+    second: wowIcons_117
+  - first:
+      213: 2185453233216370199
+    second: wowIcons_118
+  - first:
+      213: -5579931131088683144
+    second: wowIcons_119
+  - first:
+      213: -224170472267008874
+    second: wowIcons_120
+  - first:
+      213: 7342214764332997681
+    second: wowIcons_121
+  - first:
+      213: 3513776157475562025
+    second: wowIcons_122
+  - first:
+      213: -6587944394717807905
+    second: wowIcons_123
+  - first:
+      213: 4932476220237424548
+    second: wowIcons_124
+  - first:
+      213: 8994579199669943748
+    second: wowIcons_125
+  - first:
+      213: -2492296533769331602
+    second: wowIcons_126
+  - first:
+      213: 5098508247316644434
+    second: wowIcons_127
+  - first:
+      213: -2958785037755600625
+    second: wowIcons_128
+  - first:
+      213: 7140941411353160651
+    second: wowIcons_129
+  - first:
+      213: -7244963036645836938
+    second: wowIcons_130
+  - first:
+      213: 9126601181737210646
+    second: wowIcons_131
+  - first:
+      213: -7494646836670011274
+    second: wowIcons_132
+  - first:
+      213: 2028888462017949711
+    second: wowIcons_133
+  - first:
+      213: -2164476747596159815
+    second: wowIcons_134
+  - first:
+      213: 6616847479706003307
+    second: wowIcons_135
+  - first:
+      213: -6970581785353456644
+    second: wowIcons_136
+  - first:
+      213: -2244944710163965410
+    second: wowIcons_137
+  - first:
+      213: -5693091540333297281
+    second: wowIcons_138
+  - first:
+      213: 831553743962235797
+    second: wowIcons_139
+  - first:
+      213: 475762529960033588
+    second: wowIcons_140
+  - first:
+      213: 144003795905798777
+    second: wowIcons_141
+  - first:
+      213: -4639384422019277474
+    second: wowIcons_142
+  - first:
+      213: -4225864224262905883
+    second: wowIcons_143
+  - first:
+      213: 6312568502691877578
+    second: wowIcons_144
+  - first:
+      213: -888485591429411528
+    second: wowIcons_145
+  - first:
+      213: -4920260775955316253
+    second: wowIcons_146
+  - first:
+      213: 7807361261633399725
+    second: wowIcons_147
+  - first:
+      213: 5504099703262112161
+    second: wowIcons_148
+  - first:
+      213: -6241258149196635020
+    second: wowIcons_149
+  - first:
+      213: 5709726127805730776
+    second: wowIcons_150
+  - first:
+      213: 5588390450132795280
+    second: wowIcons_151
+  - first:
+      213: 4865433775426938105
+    second: wowIcons_152
+  - first:
+      213: -881504617016101957
+    second: wowIcons_153
+  - first:
+      213: -8919331384743929408
+    second: wowIcons_154
+  - first:
+      213: -2605634572666422084
+    second: wowIcons_155
+  - first:
+      213: -5794377449515156464
+    second: wowIcons_156
+  - first:
+      213: 3652003658748955296
+    second: wowIcons_157
+  - first:
+      213: 623094697267162942
+    second: wowIcons_158
+  - first:
+      213: -4017694166147439046
+    second: wowIcons_159
+  - first:
+      213: -4622206106750016683
+    second: wowIcons_160
+  - first:
+      213: 4271220767007087168
+    second: wowIcons_161
+  - first:
+      213: 3950954933268127341
+    second: wowIcons_162
+  - first:
+      213: -5891403953977594966
+    second: wowIcons_163
+  - first:
+      213: -6866316054843867981
+    second: wowIcons_164
+  - first:
+      213: 5694678474532792793
+    second: wowIcons_165
+  - first:
+      213: 5907548265049158040
+    second: wowIcons_166
+  - first:
+      213: -935286700686232452
+    second: wowIcons_167
+  - first:
+      213: 1433251671188996601
+    second: wowIcons_168
+  - first:
+      213: 920672321448102545
+    second: wowIcons_169
+  - first:
+      213: 3684516536721512783
+    second: wowIcons_170
+  - first:
+      213: -5193304321829945672
+    second: wowIcons_171
+  - first:
+      213: 673174106196096046
+    second: wowIcons_172
+  - first:
+      213: -9145610852210384328
+    second: wowIcons_173
+  - first:
+      213: -8162075558811448874
+    second: wowIcons_174
+  - first:
+      213: -7299743404689317379
+    second: wowIcons_175
+  - first:
+      213: 2014251520095963438
+    second: wowIcons_176
+  - first:
+      213: -7504899990203916726
+    second: wowIcons_177
+  - first:
+      213: -5429122511538375707
+    second: wowIcons_178
+  - first:
+      213: -683882287755979880
+    second: wowIcons_179
+  - first:
+      213: -3986231437584890611
+    second: wowIcons_180
+  - first:
+      213: -6014518943590972316
+    second: wowIcons_181
+  - first:
+      213: 89326017221633169
+    second: wowIcons_182
+  - first:
+      213: 7750972715676393656
+    second: wowIcons_183
+  - first:
+      213: 8029169661136335010
+    second: wowIcons_184
+  - first:
+      213: -8043533031383667944
+    second: wowIcons_185
+  - first:
+      213: 6304956085624770189
+    second: wowIcons_186
+  - first:
+      213: -6276093526988100820
+    second: wowIcons_187
+  - first:
+      213: 6031206203117411367
+    second: wowIcons_188
+  - first:
+      213: 5780934744570944279
+    second: wowIcons_189
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wowIcons_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2361
+        width: 120
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 605b5e0c9e7835cd0800000000000000
+      internalID: -2570561524265011962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_1
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 2358
+        width: 63
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec476ccb0644bc140800000000000000
+      internalID: 4740958215012250830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 2361
+        width: 71
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4aa2b20bdef0d850800000000000000
+      internalID: 6399895287090031179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_3
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 2425
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f12b8fb6c78f6f0800000000000000
+      internalID: -650633342979268788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_4
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 2361
+        width: 22
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78b1350e888f3800800000000000000
+      internalID: 594343819390072956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_5
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 2358
+        width: 60
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2d1fe6c71481c00800000000000000
+      internalID: 871518530589283004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_6
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 2361
+        width: 48
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65859df37757fa10800000000000000
+      internalID: 1943117919920948588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_7
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 2361
+        width: 56
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 973f97916eb21d4f0800000000000000
+      internalID: -805814591052713095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_8
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 2358
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f0c38d25a420b440800000000000000
+      internalID: 4949496282331988208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_9
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 2358
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47222876019794ae0800000000000000
+      internalID: -1564586284171517324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_10
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 2358
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a958996e3daa820f0800000000000000
+      internalID: -1141474678454778470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_11
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 2361
+        width: 21
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b11729c5947446380800000000000000
+      internalID: -8978973376658640613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_12
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 2334
+        width: 62
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5115a383dbf442970800000000000000
+      internalID: 8729189651861623061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_13
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 2361
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 840d4c2d4c8f3d630800000000000000
+      internalID: 3950774822367449160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_14
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 2358
+        width: 46
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd847ef48d18fcd0800000000000000
+      internalID: -2524235134099223048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_15
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 2358
+        width: 65
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 155f136063991a790800000000000000
+      internalID: -7520561445420796591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_16
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 2361
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7df88d40e40a8b0800000000000000
+      internalID: -5143024991736965194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_17
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 2358
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a441843ce8ac085c0800000000000000
+      internalID: -4215146536708336566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_18
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2285
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dbc2912b6470cb70800000000000000
+      internalID: 8917255265667173332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_19
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2285
+        width: 15
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0029ad318a2a121d0800000000000000
+      internalID: -3377239402779864576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_20
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 2322
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db24479afad4abf0800000000000000
+      internalID: -313885304194585648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_21
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 2285
+        width: 7
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7773116797a8dffd0800000000000000
+      internalID: -2306535179867310217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_22
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 2285
+        width: 6
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a43c6bd51843d60800000000000000
+      internalID: 7869056688421292617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_23
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 2285
+        width: 15
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636400942b60efa10800000000000000
+      internalID: 1944999451869333046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_24
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 2285
+        width: 15
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42a9616fbe5cdd650800000000000000
+      internalID: 6259376674351520292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_25
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 2322
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f32eaa3f2f8f9dd60800000000000000
+      internalID: 7915631542434193983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_26
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 2322
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95100c95a1dee5f80800000000000000
+      internalID: -8115788781044367015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_27
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2206
+        width: 141
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5531a35253dd550800000000000000
+      internalID: 6187159897081337318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_28
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 2285
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec99b9d3033e52c0800000000000000
+      internalID: -4441056090909991697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_29
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 2285
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2548791deb4d4ef10800000000000000
+      internalID: 2298195625891038290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_30
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2269
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0808f39b08b3f20800000000000000
+      internalID: 3403455476531232975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_31
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 2285
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e2a83c7cdb52ba0800000000000000
+      internalID: -6114272253408825718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_32
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 2285
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e928c942dac1210800000000000000
+      internalID: 1305108364786834962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_33
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 2285
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af901af994d64390800000000000000
+      internalID: -7834340743973920857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_34
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 2285
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d4df3e40fa015d0800000000000000
+      internalID: -3093780508463772320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_35
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2285
+        width: 6
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6184820039810e720800000000000000
+      internalID: 2873323581904275478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_36
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 2285
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29a6c59f23942c10800000000000000
+      internalID: 2027907564809136431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_37
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2285
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50fdf8099ac16e50800000000000000
+      internalID: 6800939670935826525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_38
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 2285
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54eadd10eae760bd0800000000000000
+      internalID: -2664302843722355131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_39
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 2285
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff880c26611826e70800000000000000
+      internalID: 9106983329642612991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_40
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2285
+        width: 7
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8704f90c6d1af1340800000000000000
+      internalID: 4836762468545937528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_41
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 2285
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81f7585356b318e0800000000000000
+      internalID: -1723833763272068726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_42
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 2285
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5871bef032564b50800000000000000
+      internalID: 6577034676206139486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_43
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 2285
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c105103c85bc8b0800000000000000
+      internalID: -5130909755894653816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_44
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 2285
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086a1758aa82fa800800000000000000
+      internalID: 625763586076157568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_45
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 2285
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f33eb34769260cd0800000000000000
+      internalID: -2592339012010232848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_46
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 2285
+        width: 6
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 499993522b9ab4580800000000000000
+      internalID: -8841786860818032236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_47
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 2285
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d591b2ff13f6100800000000000000
+      internalID: 103356288462314855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_48
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 2285
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab038d140bdf63f10800000000000000
+      internalID: 2249263997378900154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_49
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2104
+        width: 134
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b085037b7f069ad00800000000000000
+      internalID: 984424610603751435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_50
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 2107
+        width: 143
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac36b2e569be18b0800000000000000
+      internalID: -5179498674183062366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_51
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 2134
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16980633b2ef97a0800000000000000
+      internalID: -6368122088745036258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_52
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 2139
+        width: 48
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ab000ed08519a80800000000000000
+      internalID: -8461885408236488154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_53
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 2134
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7e6968cdca81040800000000000000
+      internalID: 4618631481019262891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_54
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 2135
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8707d447bd35b1d20800000000000000
+      internalID: 3250283758092120184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_55
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 2130
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820acd30e6302a9c0800000000000000
+      internalID: -3917564954812833752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_56
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 2135
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b696081e0fc6c190800000000000000
+      internalID: -7942433233381714247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_57
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 2144
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d06aee561ff8500800000000000000
+      internalID: 400804311957114141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_58
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 2059
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76a3f6ad3d5e7780800000000000000
+      internalID: -8683400512148363650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_59
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 2063
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b855f9a8109677950800000000000000
+      internalID: 6446736846945736075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_60
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 2059
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f493c03c7b4decfa0800000000000000
+      internalID: -5778447386153305777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_61
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 2059
+        width: 48
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ada8c2f264f66a20800000000000000
+      internalID: 3055398103034670497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_62
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 2084
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a25567eac69af80800000000000000
+      internalID: -8094819358656353669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_63
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 2055
+        width: 49
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8ead76dd7ce2370800000000000000
+      internalID: 8299790917034502368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_64
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 2059
+        width: 54
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb4cee86a7a52060800000000000000
+      internalID: 6928127935583636429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_65
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 2071
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b867d6f292c39660800000000000000
+      internalID: 7391465349907441847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_66
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 2016
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee7216740b05a190800000000000000
+      internalID: -7951937453264044309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_67
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2015
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f506682c6d139120800000000000000
+      internalID: 2419309775199536627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_68
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 2016
+        width: 47
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2686d829f6cfae480800000000000000
+      internalID: -8868998960022460318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_69
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 2015
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adda43dfed861b800800000000000000
+      internalID: 626397130121326042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_70
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2022
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f177295dee0cbea0800000000000000
+      internalID: -5855789002922692112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_71
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 2022
+        width: 69
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff5d7b9e64756740800000000000000
+      internalID: 5144646167744569342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_72
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 2034
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5077496cfed76bf0800000000000000
+      internalID: -331050871909027746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_73
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 2020
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e9de527945d7d890800000000000000
+      internalID: -7433238148523566622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_74
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 2032
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16d70fbcbf6fa2e0800000000000000
+      internalID: -2112346843763976677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_75
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 2021
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e0740e3943cc200800000000000000
+      internalID: 201593893052419603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_76
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 2020
+        width: 36
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a5d80f9e5acfa70800000000000000
+      internalID: 8862140590940052059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_77
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 2021
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d48c211190add5010800000000000000
+      internalID: 1179338409916942413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_78
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 2020
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b3098152347e370800000000000000
+      internalID: 8351717860586830631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_79
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 2021
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f8cd2a22e9fc1a0800000000000000
+      internalID: -6787032241825607928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_80
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 2020
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98284811df525e10800000000000000
+      internalID: 2184914120888297630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_81
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2020
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30edc290b5f6aab00800000000000000
+      internalID: 840606717244661251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_82
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 2019
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56d5c60d7ba31fa0800000000000000
+      internalID: -5831128539041769889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_83
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 2030
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea4fe1ed194e7400800000000000000
+      internalID: 323776615910689510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_84
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 2018
+        width: 75
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72a8f8c876815ff0800000000000000
+      internalID: -49110267598429573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_85
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 2019
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fd268f6328bff50800000000000000
+      internalID: 6916264825364602680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_86
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 2030
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efd624fe396515b80800000000000000
+      internalID: -8407843835949715970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_87
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2021
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a242f100a8c99650800000000000000
+      internalID: 6240239348251509417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_88
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2020
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc384054b2688fa0800000000000000
+      internalID: -5798275993658966841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_89
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 2018
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19a3467c88e3ebb0800000000000000
+      internalID: -4907823478926497507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_90
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 2018
+        width: 37
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52c10f8d9b9da120800000000000000
+      internalID: 2426766875233993307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_91
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 2018
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ceefc74679dd7a0800000000000000
+      internalID: -6350753441672926073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_92
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1911
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9eb0f8c7a5063380800000000000000
+      internalID: -8991993387809718629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_93
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1916
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2ae0b9581afb1100800000000000000
+      internalID: 79932400900041263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_94
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1923
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737e4fa8cfe711a20800000000000000
+      internalID: 3031343647325218615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_95
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1924
+        width: 61
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b6ff76e03f9e0f0800000000000000
+      internalID: -1087070591833380070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_96
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1925
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e51ebcecb064a950800000000000000
+      internalID: 6459394130098132449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_97
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1921
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ea8e5ce09149320800000000000000
+      internalID: 2563701639121251888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_98
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 1924
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3069aa6bcadac3490800000000000000
+      internalID: -7765140700182964733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_99
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1925
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f74468cb693e33d0800000000000000
+      internalID: -3225077148064397322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_100
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1924
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe0e29df8a982050800000000000000
+      internalID: 5776036464717336252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_101
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 1927
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628cadd379c0d35a0800000000000000
+      internalID: -6540057240154748890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_102
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 1917
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b44a5c605781440800000000000000
+      internalID: 4906800465966287746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_103
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1845
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8eaecc372ba3be0800000000000000
+      internalID: -1496687715718338377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_104
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1839
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d0a37e9ec0fd920800000000000000
+      internalID: 3017144474107776260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_105
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1843
+        width: 61
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07dfeee6c631ee570800000000000000
+      internalID: 8497750903333256560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_106
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1845
+        width: 63
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55bf80495070c4130800000000000000
+      internalID: 3552221926628326229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_107
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1860
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68135153d4754d360800000000000000
+      internalID: 7193470493932204422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_108
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 1845
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dafad4f72fc5e930800000000000000
+      internalID: 4171968400347298516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_109
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1844
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7573840b2060c8020800000000000000
+      internalID: 2345256114570409815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_110
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1845
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5382cec428e3f910800000000000000
+      internalID: 1870093515074208606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_111
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1849
+        width: 51
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd19b21973baf9ee0800000000000000
+      internalID: -1252093916238605859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_112
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1851
+        width: 46
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d91af8dc249bb70800000000000000
+      internalID: 8915230388002069877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_113
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1854
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789f273a84723fbb0800000000000000
+      internalID: -4903532376342988409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_114
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 1843
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f65df026a8d79eb10800000000000000
+      internalID: 2011276741901800815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_115
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1803
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55431eec7fc5a440800000000000000
+      internalID: 4946587901213492571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_116
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1803
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c5a411034ff43a0800000000000000
+      internalID: -6678851235081462658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_117
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1799
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbfd947fea01b43e0800000000000000
+      internalID: -2068541260187443265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_118
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1801
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7163717f22a445e10800000000000000
+      internalID: 2185453233216370199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_119
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1812
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87fb054333a1092b0800000000000000
+      internalID: -5579931131088683144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_120
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1801
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694b467a42693ecf0800000000000000
+      internalID: -224170472267008874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_121
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1812
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c52bc6d69c4e560800000000000000
+      internalID: 7342214764332997681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_122
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1803
+        width: 56
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92261966cc073c030800000000000000
+      internalID: 3513776157475562025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_123
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1803
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdab1d83a7be294a0800000000000000
+      internalID: -6587944394717807905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_124
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1803
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7205a2dfca37440800000000000000
+      internalID: 4932476220237424548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_125
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1803
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cdb174702a23dc70800000000000000
+      internalID: 8994579199669943748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_126
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1803
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6cddbdd185996dd0800000000000000
+      internalID: -2492296533769331602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_127
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1803
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25245b5ec3a81c640800000000000000
+      internalID: 5098508247316644434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_128
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1815
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0136d93fa840f6d0800000000000000
+      internalID: -2958785037755600625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_129
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1804
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcbe4991168b91360800000000000000
+      internalID: 7140941411353160651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_130
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1804
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677b3ede088b47b90800000000000000
+      internalID: -7244963036645836938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_131
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 1803
+        width: 48
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6135b148b6338ae70800000000000000
+      internalID: 9126601181737210646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_132
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1803
+        width: 48
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 678674f096aadf790800000000000000
+      internalID: -7494646836670011274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_133
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 1803
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00f7738e4f082c10800000000000000
+      internalID: 2028888462017949711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_134
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1803
+        width: 48
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b420feaddb36f1e0800000000000000
+      internalID: -2164476747596159815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_135
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1815
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67a0d8a9b3c3db50800000000000000
+      internalID: 6616847479706003307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_136
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1803
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf3f2364cc4834f90800000000000000
+      internalID: -6970581785353456644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_137
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 1803
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ad84a2eaa58d0e0800000000000000
+      internalID: -2244944710163965410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_138
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1803
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7107a848631ef0b0800000000000000
+      internalID: -5693091540333297281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_139
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 1803
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593e38079b54a8b00800000000000000
+      internalID: 831553743962235797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_140
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1801
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d75b3108f3a9600800000000000000
+      internalID: 475762529960033588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_141
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1801
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972e54d70ba9ff100800000000000000
+      internalID: 144003795905798777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_142
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1801
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5d5f0dd2789d9fb0800000000000000
+      internalID: -4639384422019277474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_143
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1689
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef17cba0e6ba55c0800000000000000
+      internalID: -4225864224262905883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_144
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1693
+        width: 66
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2d4479b9fba9750800000000000000
+      internalID: 6312568502691877578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_145
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1695
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d0ccedf077ba3f0800000000000000
+      internalID: -888485591429411528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_146
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1695
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e145e694e8b7bbb0800000000000000
+      internalID: -4920260775955316253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_147
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1698
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dabedc8c3b1595c60800000000000000
+      internalID: 7807361261633399725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_148
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1700
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a96545a48d726c40800000000000000
+      internalID: 5504099703262112161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_149
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1714
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4746f99e7c89269a0800000000000000
+      internalID: -6241258149196635020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_150
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1696
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df80ac69a50d3f40800000000000000
+      internalID: 5709726127805730776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_151
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1695
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09fb95e7183fd8d40800000000000000
+      internalID: 5588390450132795280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_152
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1686
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4a2869d3e758340800000000000000
+      internalID: 4865433775426938105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_153
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1694
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb373e2a83444c3f0800000000000000
+      internalID: -881504617016101957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_154
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1655
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c9585abc5b283480800000000000000
+      internalID: -8919331384743929408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_155
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1614
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbcbdb1592de6dbd0800000000000000
+      internalID: -2605634572666422084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_156
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1618
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c7d1bd86c369fa0800000000000000
+      internalID: -5794377449515156464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_157
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1641
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa882e7af58ea230800000000000000
+      internalID: 3652003658748955296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_158
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1622
+        width: 60
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3fe90c635da5a800800000000000000
+      internalID: 623094697267162942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_159
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1619
+        width: 53
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a366f9a41784e38c0800000000000000
+      internalID: -4017694166147439046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_160
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1622
+        width: 60
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55326801900aadfb0800000000000000
+      internalID: -4622206106750016683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_161
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1619
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a9abe58ac664b30800000000000000
+      internalID: 4271220767007087168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_162
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1636
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e1609249c94d630800000000000000
+      internalID: 3950954933268127341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_163
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1617
+        width: 55
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab65de51578d3ea0800000000000000
+      internalID: -5891403953977594966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_164
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1621
+        width: 62
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc387b6de1f5b0a0800000000000000
+      internalID: -6866316054843867981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_165
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1622
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d92790a6ef870f40800000000000000
+      internalID: 5694678474532792793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_166
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 1625
+        width: 62
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891fab7f8d3dbf150800000000000000
+      internalID: 5907548265049158040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_167
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1571
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c74337a73b13503f0800000000000000
+      internalID: -935286700686232452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_168
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1571
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f184fe1dcee3e310800000000000000
+      internalID: 1433251671188996601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_169
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1571
+        width: 55
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ac2723992e6cc00800000000000000
+      internalID: 920672321448102545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_170
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1572
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49965cc448022330800000000000000
+      internalID: 3684516536721512783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_171
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1571
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be33de0c3dade7b0800000000000000
+      internalID: -5193304321829945672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_172
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1572
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e243fcf6848975900800000000000000
+      internalID: 673174106196096046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_173
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1571
+        width: 44
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 832ea0ca263441180800000000000000
+      internalID: -9145610852210384328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_174
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1572
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d94527168b7abe80800000000000000
+      internalID: -8162075558811448874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_175
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1571
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df12ef39c0a12ba90800000000000000
+      internalID: -7299743404689317379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_176
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1572
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e294c97e51f04fb10800000000000000
+      internalID: 2014251520095963438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_177
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1572
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e1019b83d39d790800000000000000
+      internalID: -7504899990203916726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_178
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1571
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e3bda927d1e7a4b0800000000000000
+      internalID: -5429122511538375707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_179
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1571
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8939f12ceac5286f0800000000000000
+      internalID: -683882287755979880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_180
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1583
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d050242a0af0ea8c0800000000000000
+      internalID: -3986231437584890611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_181
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1572
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464076813e2288ca0800000000000000
+      internalID: -6014518943590972316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_182
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1572
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19422b51a895d3100800000000000000
+      internalID: 89326017221633169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_183
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1567
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b0e2a55e9cf09b60800000000000000
+      internalID: 7750972715676393656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_184
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1572
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a0ff5534475d6f60800000000000000
+      internalID: 8029169661136335010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_185
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1571
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b614d0351af5090800000000000000
+      internalID: -8043533031383667944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_186
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1567
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e0a10a724bf7750800000000000000
+      internalID: 6304956085624770189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_187
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1571
+        width: 48
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2beeba7036d6e8a0800000000000000
+      internalID: -6276093526988100820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_188
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1572
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c12f7461623b350800000000000000
+      internalID: 6031206203117411367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wowIcons_189
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1571
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b5ddf75810a3050800000000000000
+      internalID: 5780934744570944279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wowIcons_0: -2570561524265011962
+      wowIcons_1: 4740958215012250830
+      wowIcons_10: -1141474678454778470
+      wowIcons_100: 5776036464717336252
+      wowIcons_101: -6540057240154748890
+      wowIcons_102: 4906800465966287746
+      wowIcons_103: -1496687715718338377
+      wowIcons_104: 3017144474107776260
+      wowIcons_105: 8497750903333256560
+      wowIcons_106: 3552221926628326229
+      wowIcons_107: 7193470493932204422
+      wowIcons_108: 4171968400347298516
+      wowIcons_109: 2345256114570409815
+      wowIcons_11: -8978973376658640613
+      wowIcons_110: 1870093515074208606
+      wowIcons_111: -1252093916238605859
+      wowIcons_112: 8915230388002069877
+      wowIcons_113: -4903532376342988409
+      wowIcons_114: 2011276741901800815
+      wowIcons_115: 4946587901213492571
+      wowIcons_116: -6678851235081462658
+      wowIcons_117: -2068541260187443265
+      wowIcons_118: 2185453233216370199
+      wowIcons_119: -5579931131088683144
+      wowIcons_12: 8729189651861623061
+      wowIcons_120: -224170472267008874
+      wowIcons_121: 7342214764332997681
+      wowIcons_122: 3513776157475562025
+      wowIcons_123: -6587944394717807905
+      wowIcons_124: 4932476220237424548
+      wowIcons_125: 8994579199669943748
+      wowIcons_126: -2492296533769331602
+      wowIcons_127: 5098508247316644434
+      wowIcons_128: -2958785037755600625
+      wowIcons_129: 7140941411353160651
+      wowIcons_13: 3950774822367449160
+      wowIcons_130: -7244963036645836938
+      wowIcons_131: 9126601181737210646
+      wowIcons_132: -7494646836670011274
+      wowIcons_133: 2028888462017949711
+      wowIcons_134: -2164476747596159815
+      wowIcons_135: 6616847479706003307
+      wowIcons_136: -6970581785353456644
+      wowIcons_137: -2244944710163965410
+      wowIcons_138: -5693091540333297281
+      wowIcons_139: 831553743962235797
+      wowIcons_14: -2524235134099223048
+      wowIcons_140: 475762529960033588
+      wowIcons_141: 144003795905798777
+      wowIcons_142: -4639384422019277474
+      wowIcons_143: -4225864224262905883
+      wowIcons_144: 6312568502691877578
+      wowIcons_145: -888485591429411528
+      wowIcons_146: -4920260775955316253
+      wowIcons_147: 7807361261633399725
+      wowIcons_148: 5504099703262112161
+      wowIcons_149: -6241258149196635020
+      wowIcons_15: -7520561445420796591
+      wowIcons_150: 5709726127805730776
+      wowIcons_151: 5588390450132795280
+      wowIcons_152: 4865433775426938105
+      wowIcons_153: -881504617016101957
+      wowIcons_154: -8919331384743929408
+      wowIcons_155: -2605634572666422084
+      wowIcons_156: -5794377449515156464
+      wowIcons_157: 3652003658748955296
+      wowIcons_158: 623094697267162942
+      wowIcons_159: -4017694166147439046
+      wowIcons_16: -5143024991736965194
+      wowIcons_160: -4622206106750016683
+      wowIcons_161: 4271220767007087168
+      wowIcons_162: 3950954933268127341
+      wowIcons_163: -5891403953977594966
+      wowIcons_164: -6866316054843867981
+      wowIcons_165: 5694678474532792793
+      wowIcons_166: 5907548265049158040
+      wowIcons_167: -935286700686232452
+      wowIcons_168: 1433251671188996601
+      wowIcons_169: 920672321448102545
+      wowIcons_17: -4215146536708336566
+      wowIcons_170: 3684516536721512783
+      wowIcons_171: -5193304321829945672
+      wowIcons_172: 673174106196096046
+      wowIcons_173: -9145610852210384328
+      wowIcons_174: -8162075558811448874
+      wowIcons_175: -7299743404689317379
+      wowIcons_176: 2014251520095963438
+      wowIcons_177: -7504899990203916726
+      wowIcons_178: -5429122511538375707
+      wowIcons_179: -683882287755979880
+      wowIcons_18: 8917255265667173332
+      wowIcons_180: -3986231437584890611
+      wowIcons_181: -6014518943590972316
+      wowIcons_182: 89326017221633169
+      wowIcons_183: 7750972715676393656
+      wowIcons_184: 8029169661136335010
+      wowIcons_185: -8043533031383667944
+      wowIcons_186: 6304956085624770189
+      wowIcons_187: -6276093526988100820
+      wowIcons_188: 6031206203117411367
+      wowIcons_189: 5780934744570944279
+      wowIcons_19: -3377239402779864576
+      wowIcons_2: 6399895287090031179
+      wowIcons_20: -313885304194585648
+      wowIcons_21: -2306535179867310217
+      wowIcons_22: 7869056688421292617
+      wowIcons_23: 1944999451869333046
+      wowIcons_24: 6259376674351520292
+      wowIcons_25: 7915631542434193983
+      wowIcons_26: -8115788781044367015
+      wowIcons_27: 6187159897081337318
+      wowIcons_28: -4441056090909991697
+      wowIcons_29: 2298195625891038290
+      wowIcons_3: -650633342979268788
+      wowIcons_30: 3403455476531232975
+      wowIcons_31: -6114272253408825718
+      wowIcons_32: 1305108364786834962
+      wowIcons_33: -7834340743973920857
+      wowIcons_34: -3093780508463772320
+      wowIcons_35: 2873323581904275478
+      wowIcons_36: 2027907564809136431
+      wowIcons_37: 6800939670935826525
+      wowIcons_38: -2664302843722355131
+      wowIcons_39: 9106983329642612991
+      wowIcons_4: 594343819390072956
+      wowIcons_40: 4836762468545937528
+      wowIcons_41: -1723833763272068726
+      wowIcons_42: 6577034676206139486
+      wowIcons_43: -5130909755894653816
+      wowIcons_44: 625763586076157568
+      wowIcons_45: -2592339012010232848
+      wowIcons_46: -8841786860818032236
+      wowIcons_47: 103356288462314855
+      wowIcons_48: 2249263997378900154
+      wowIcons_49: 984424610603751435
+      wowIcons_5: 871518530589283004
+      wowIcons_50: -5179498674183062366
+      wowIcons_51: -6368122088745036258
+      wowIcons_52: -8461885408236488154
+      wowIcons_53: 4618631481019262891
+      wowIcons_54: 3250283758092120184
+      wowIcons_55: -3917564954812833752
+      wowIcons_56: -7942433233381714247
+      wowIcons_57: 400804311957114141
+      wowIcons_58: -8683400512148363650
+      wowIcons_59: 6446736846945736075
+      wowIcons_6: 1943117919920948588
+      wowIcons_60: -5778447386153305777
+      wowIcons_61: 3055398103034670497
+      wowIcons_62: -8094819358656353669
+      wowIcons_63: 8299790917034502368
+      wowIcons_64: 6928127935583636429
+      wowIcons_65: 7391465349907441847
+      wowIcons_66: -7951937453264044309
+      wowIcons_67: 2419309775199536627
+      wowIcons_68: -8868998960022460318
+      wowIcons_69: 626397130121326042
+      wowIcons_7: -805814591052713095
+      wowIcons_70: -5855789002922692112
+      wowIcons_71: 5144646167744569342
+      wowIcons_72: -331050871909027746
+      wowIcons_73: -7433238148523566622
+      wowIcons_74: -2112346843763976677
+      wowIcons_75: 201593893052419603
+      wowIcons_76: 8862140590940052059
+      wowIcons_77: 1179338409916942413
+      wowIcons_78: 8351717860586830631
+      wowIcons_79: -6787032241825607928
+      wowIcons_8: 4949496282331988208
+      wowIcons_80: 2184914120888297630
+      wowIcons_81: 840606717244661251
+      wowIcons_82: -5831128539041769889
+      wowIcons_83: 323776615910689510
+      wowIcons_84: -49110267598429573
+      wowIcons_85: 6916264825364602680
+      wowIcons_86: -8407843835949715970
+      wowIcons_87: 6240239348251509417
+      wowIcons_88: -5798275993658966841
+      wowIcons_89: -4907823478926497507
+      wowIcons_9: -1564586284171517324
+      wowIcons_90: 2426766875233993307
+      wowIcons_91: -6350753441672926073
+      wowIcons_92: -8991993387809718629
+      wowIcons_93: 79932400900041263
+      wowIcons_94: 3031343647325218615
+      wowIcons_95: -1087070591833380070
+      wowIcons_96: 6459394130098132449
+      wowIcons_97: 2563701639121251888
+      wowIcons_98: -7765140700182964733
+      wowIcons_99: -3225077148064397322
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -24,8 +24,12 @@ public class PagesButton : MonoBehaviour
     {
         SceneManager.LoadScene("word");
     }
-    public void onClickGotohomebutton(){
+    public void onClickGotohomebutton()
+    {
         SceneManager.LoadScene("home");
+    }
+    public void onClickGotoQuizbutton(){
+        SceneManager.LoadScene("gotoQuiz");
     }
     public void onClickranking()
 {
