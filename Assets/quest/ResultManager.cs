@@ -118,7 +118,7 @@ public class ResultManager : MonoBehaviour // 💡 クラス名が ResultManager
             }
             if (expText != null)
             {
-                expText.text = $"総経験値: {status.currentExperience} | 攻撃力:{status.attackPower}";
+                expText.text = $"総経験値: {status.currentExperience}";
             }
             // ガチャポイントはAPIレスポンスに含まれていませんが、クリア報酬として50ポイントを仮定
             if (gachaPointText != null)

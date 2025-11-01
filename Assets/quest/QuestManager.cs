@@ -149,7 +149,7 @@ public class QuestManager : MonoBehaviour
         HighlightAnswer(selectedOptionIndex, isCorrect);
         if (resultMessageText != null)
         {
-            resultMessageText.text = isCorrect ? "正解！🎯 ボスに攻撃！" : "不正解...🤕 ダメージを受けた！";
+            resultMessageText.text = isCorrect ? "正解！ボスに攻撃！" : "不正解...ダメージを受けた！";
         }
 
         // wordId(string) → int型に変換して渡す
@@ -204,7 +204,7 @@ public class QuestManager : MonoBehaviour
         SetButtonsInteractable(false);
         if (resultMessageText != null)
         {
-            resultMessageText.text = finalStatus == "completed" ? "🎉 クエストクリア！" : "😭 クエスト失敗...";
+            resultMessageText.text = finalStatus == "completed" ? "クエストクリア！" : "クエスト失敗...";
         }
 
         // 結果取得APIを呼び出し、コールバックでデータを保存し遷移
