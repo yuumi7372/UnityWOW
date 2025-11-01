@@ -28,8 +28,8 @@ public class PagesButton : MonoBehaviour
         SceneManager.LoadScene("home");
     }
     public void onClickranking()
-{
+    {
     SceneManager.LoadScene("ranking");
-}
+    }
    
 }
