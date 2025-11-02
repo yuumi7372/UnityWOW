@@ -807,7 +807,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 440381252}
         m_TargetAssemblyTypeName: PagesButton, Assembly-CSharp
-        m_MethodName: onClickGotoQuizbutton
+        m_MethodName: onClickGotoComunitybutton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
