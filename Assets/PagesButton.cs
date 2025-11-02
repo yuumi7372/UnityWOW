@@ -28,8 +28,12 @@ public class PagesButton : MonoBehaviour
     {
         SceneManager.LoadScene("home");
     }
-    public void onClickGotoQuizbutton(){
+    public void onClickGotoQuizbutton()
+    {
         SceneManager.LoadScene("gotoQuiz");
+    }
+    public void onClickGotoComunitybutton(){
+        SceneManager.LoadScene("comunity");
     }
     public void onClickranking()
     {
