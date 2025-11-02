@@ -1360,7 +1360,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1718189316}
         m_TargetAssemblyTypeName: PagesButton, Assembly-CSharp
-        m_MethodName: onClickGotohomebutton
+        m_MethodName: onClickGotoComunitybutton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
